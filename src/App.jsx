@@ -1,9 +1,11 @@
 
 
 
+
 import './App.css';
 import './index.css';
 import { Rot } from './rotpage/Rot';
+
 
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
   return (
   
 <div>
-   <Rot />
+<Rot/>
 </div>
     
   );
