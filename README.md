@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚗 My Mini E-commerce Website
 
 A modern car e-commerce web application built with **React**, **Vite**, and **Tailwind CSS**.
@@ -46,3 +47,6 @@ GitHub source code:
    git clone https://github.com/developertuls/my-ecomerce.git
 
 
+=======
+# my-hom-project
+>>>>>>> 80d57beeaa7a67171f39dab4bf932a5aab5e5a07
