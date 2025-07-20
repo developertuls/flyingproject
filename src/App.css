@@ -1,11 +1,9 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 .bgg{
-    background-image: url(images/navberhom.jpg);
+    background-image: url(assets/su.avif);
     background-position: center;
     background-size: cover;
 }
@@ -14,5 +12,46 @@ ul{
     font-family: sans-serif;
 }
 h1{
-    font-family:  "Francois One", sans-serif; ;
+   font-family: sans-serif;
+  
 }
+
+h3{
+    font-family: "Bebas Neue", sans-serif;  
+}
+
+.text-text{
+    font-family: sans-serif;
+}
+
+
+.logo-animet{
+animation: color 5s linear infinite;
+transform: perspective(1000px);
+/* background: #32ff7e; */
+
+}
+
+
+@keyframes color{
+20%{
+  color:blue;
+}
+30%{
+  color:black;
+}
+20%{
+  transform: rotateY(50deg);
+}
+
+5%{
+color: linear-gradient(#ffffff,#ffa502,#ff6348,#be2edd);
+}
+5%{
+transform: scaleX(0.1);
+transform: skewY(-50deg);
+}
+  
+}
+
+
