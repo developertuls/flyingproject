@@ -13,6 +13,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 
 
+
 const router=createBrowserRouter([
 {
     path:'/',
@@ -21,7 +22,7 @@ const router=createBrowserRouter([
 {index:true,
     Component:Home
 
-}
+},
 
 
 

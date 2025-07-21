@@ -17,10 +17,13 @@ export const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="absolute inset-0 flex items-center md:left-[262px]"
+        className=" absolute inset-0 flex items-center md:left-[262px]"
       >
-        <h1 className="text-white md:text-9xl md:mt-9 font-bold leading-tight">
-          Your <br /> lifestyle <br /> Home
+        <h1 className=" shadow-2xl md-text-h1 hidden md:block font-medium  text-center  text-white md:text-9xl md:mt-9 leading-tight">
+          Your <br/> lifestyle <br /> Home
+        </h1>
+        <h1 className="block md:hidden mx-auto  md:mx-0  text-center text-5xl text-white md:text-9xl md:mt-9 font-bold leading-tight">
+          Your life style  Home
         </h1>
       </motion.div>
     </motion.div>

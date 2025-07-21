@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
 
 .bgg{
@@ -7,6 +8,27 @@
     background-position: center;
     background-size: cover;
 }
+
+.text-div{
+   background-image: url(images/in.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.from-bg{
+  background-image: url(images/ho.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.bggallary{
+    background-image: url(images/bgg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 ul{
     font-family: sans-serif;
@@ -20,6 +42,14 @@ h3{
     font-family: "Bebas Neue", sans-serif;  
 }
 
+.md-text-h1{
+   font-family:  Tahoma, sans-serif;
+}
+h2{
+    font-family:  Tahoma, sans-serif;
+   
+}
+
 .text-text{
     font-family: sans-serif;
 }
@@ -28,7 +58,7 @@ h3{
 .logo-animet{
 animation: color 5s linear infinite;
 transform: perspective(1000px);
-/* background: #32ff7e; */
+color: #080908;
 
 }
 
@@ -37,21 +67,13 @@ transform: perspective(1000px);
 20%{
   color:blue;
 }
-30%{
+80%{
+  
   color:black;
 }
-20%{
-  transform: rotateY(50deg);
-}
 
-5%{
-color: linear-gradient(#ffffff,#ffa502,#ff6348,#be2edd);
-}
-5%{
-transform: scaleX(0.1);
-transform: skewY(-50deg);
-}
   
 }
+
 
 
