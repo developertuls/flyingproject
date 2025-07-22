@@ -28,6 +28,50 @@
     background-size: cover;
 }
 
+.busy-1 {
+  background-image: url('/images/re.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.busy-2 {
+  background-image: url('/images/bu2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.busy-3 {
+  background-image: url('/images/bu7.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.busy-4 {
+  background-image: url('/images/bu4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.busy-5 {
+  background-image: url('/images/bu8.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.busy-6 {
+  background-image: url('/images/bu6.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
 
 
 ul{
@@ -38,7 +82,7 @@ h1{
   
 }
 
-h3{
+.logo-animet{
     font-family: "Bebas Neue", sans-serif;  
 }
 
