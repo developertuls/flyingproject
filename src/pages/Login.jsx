@@ -1,6 +1,47 @@
-export const Login = () => {
+ 
+ 
+ 
+ import { motion } from "motion/react";
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+ 
+ 
+ 
+
+
+
+
+
+
+
+ export const Login = () => {
+ const [email, setEmail] = useState("");
+ const [name, setName] = useState("");
+ const [date, setDate] = useState("");
+ const [price, setPrice] = useState("");
+ const [phone, setPhone] = useState("");
+ const handleSubmit = (e) => {
+    e.preventDefault();
+  
+ 
+  console.log('name',name);
+  console.log('phone',phone);
+  console.log('Email',email);
+  console.log('price',price);
+  console.log('date',date);
+  
+  
+  };
+
+
+
+
+
+
+
+
   return (
-    <div className=" min-h-screen py-10">
+    <div className=" min-h-screen py-10 md:mt-[40px]">
       <div className="container mx-auto flex flex-col md:flex-row md:gap-x-5 md:w-[90%] justify-center items-stretch px-4">
 
         {/* Left side text */}
@@ -20,26 +61,49 @@ export const Login = () => {
         </div>
 
         {/* Right side form */}
-        <div className="from-bg relative w-full md:w-1/2 h-[600px] md:h-[500px] overflow-hidden">
+        <motion.div
+        initial={{ opacity: 0, y: 100 }} // 
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+         className="from-bg relative w-full md:w-1/2 h-[600px] md:h-[500px] overflow-hidden">
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-          <form className="absolute inset-0 bg-teal-500/20 text-white text-center flex flex-col justify-center items-center px-4">
+          <form onSubmit={handleSubmit} className="absolute inset-0 bg-teal-500/20 text-white text-center flex flex-col justify-center items-center px-4">
             <h2 className="text-xl md:text-3xl mb-6">Get Login</h2>
 
             <input
-              className="input-bg w-[70%] p-3 placeholder:text-2xl outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-              type="text" name="text" placeholder="Your name"
-            />
+            onChange={(e) => setName(e.target.value)}
+              className="input-bg w-[70%] p-3  placeholder:text-2xl  text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
+              type="text" name="name" placeholder="Your name"
+            required/>
 
             <input
-              className="input-bg w-[70%] p-3 placeholder:text-2xl outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
+             onChange={(e) => setPhone(e.target.value)}
+              className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000]  outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
+              type="name" name="phone" placeholder="Your Phon"
+            required/>
+
+            <input
+             onChange={(e) => setEmail(e.target.value)}
+              className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
               type="email" name="email" placeholder="Your Email"
-            />
+            required/>
+
 
             <input
-              className="input-bg w-[70%] p-3 placeholder:text-2xl outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-              type="password" name="password" placeholder="Your Password"
-            />
+            onChange={(e) => setPrice(e.target.value)}
+              className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
+              type="name" name="price" placeholder="Total price /-50000"
+            required/>
+
+            <input
+            onChange={(e) => setDate(e.target.value)}
+              className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
+              type="Date" name="date"  placeholder="Preferred visit date" 
+            required/>
+
+
 
             <button
               type="submit"
@@ -47,7 +111,7 @@ export const Login = () => {
               Submit
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
