@@ -4,10 +4,10 @@ import React from 'react';
 
 export const Bookingthe = () => {
   return (
-    <div className="bg-[#fff8f8] min-h-screen py-10 text-[#000]">
+    <div className="bg-[#f6f4f4] min-h-screen py-10 text-[#000]">
       <h1 className="text-center text-[#000] text-2xl md:text-4xl font-bold mb-10">Testimonials</h1>
 
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4">
+      <div className="gap-x-5 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4">
         {/* Card 1 */}
         <div className="relative  w-full h-[300px] rounded-lg flex flex-col items-center justify-center text-white">
           <div className="busy-1 absolute -top-8 w-[100px] h-[100px] rounded-full"></div>

@@ -1,13 +1,13 @@
 
 import { Link } from "react-router-dom";
-
-
-
+import { FaHandshake } from "react-icons/fa";
+import { FcHome } from "react-icons/fc";
+import { SiHomeassistant } from "react-icons/si";
 
 
 export const Gellryhome = () => {
   return (
-    <div className=" py-10">
+    <div className=" py-10 ">
       <div className="flex flex-col md:flex-row container mx-auto px-4 gap-6">
 
         {/* Left side */}
@@ -16,23 +16,23 @@ export const Gellryhome = () => {
           <img
             src="images/bgg.jpg"
             alt="gallery"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover "
           />
         </div>
 
         {/* Right side */}
-        <div className="w-full md:w-1/2 bg-white p-4">
+        <div className="w-full md:w-1/2  p-4 ">
           <h1 className="text-2xl font-bold mb-2">Bayshores Traditional</h1>
-          <span className="text-gray-700 mb-2 block">
+          <span className=" mb-2 block">
             Lorem ipsum, dolor sit amet consectetur ad
           </span>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm  mb-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
             corrupti culpa molestiae voluptas eius numquam at aut debitis
             consequuntur! Ab, consectetur repellat.
           </p>
-          <button className="md:mx-0 mx-auto block bg-[#12CBC4] text-white px-5 py-2 rounded font-medium">
+          <button className="transition-all duration-5.9   hover:px-7 hover:py-3  md:mx-0 mx-auto block bg-[#12CBC4] hover:bg-[#2d7a77] text-white px-6 py-2 rounded font-medium">
             Yourdesite
           </button>
         </div>
@@ -43,20 +43,23 @@ export const Gellryhome = () => {
       </div>
       <div className="md:mt-9 flex flex-col md:flex-row container mx-auto px-4 gap-6">
         {/* Left side */}
-      <div className="w-full md:w-1/2 bg-white p-4 ">
+      <div className="w-full md:w-1/2  p-4 ">
           <h1 className="text-2xl font-bold mb-2">Your home and the outside view are really impressive</h1>
-          <span className="text-gray-700 mb-2 block">
+          <span className=" mb-2 block">
             Lorem ipsum, dolor sit amet consectetur ad
           </span>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm  mb-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
             corrupti culpa molestiae voluptas eius numquam at aut debitis
             consequuntur! Ab, consectetur repellat.
           </p>
-          <Link to={'/go'}><button className= "md:mx-0  mx-auto block bg-[#12CBC4] font-medium text-white px-4 py-2 rounded">
+          <Link to={'/go'}>
+          <button
+           className= "transition-all duration-5.9 md:mx-0 hover:px-7 hover:py-3 hover:bg-[#2d7a77] mx-auto block bg-[#12CBC4] font-medium text-white px-6 py-2 rounded">
             Yourdesite
-          </button></Link>
+          </button>
+          </Link>
         </div>
 
         {/* Right side */}
@@ -76,17 +79,82 @@ export const Gellryhome = () => {
 </div>
 
 
+{/* flexdiv */}
+<div className=" py-8 mt-[80px]  ">
+  <h1 className="text-xl md:text-4xl font-bold text-center "><span>Empowering</span> You through <br />Real Estste <span className="text-[#209c7d]">Solutions.</span> </h1>
+  
+  
+  
+  <div className="transition-all duration-4.5 p-8 mt-4 md:mt-7 mx-auto container  grid md:grid-cols-3 justify-center items-center md:gap-x-4 gap-y-5">
 
-<div className="bg-[#1B1464] py-8 mt-7 text-white">
-  <div className=" text-center">
-<ul className="grid grid-cols-3 md:grid-cols-6 container mx-auto justify-center items-center">
-  <li>HOME <br /> Business All</li>
-  <li>HOME <br /> market Abut</li>
-  <li>HOME <br /> bulid Business</li>
-  <li>HOME <br /> detelse</li>
-  <li> Business <br /> All Doner</li>
-  <li>HOME <br /> defret All</li>
-</ul>
+    
+   {/* flexBox-1 */} 
+  <div className="w-[400px]  text-left p-9 shadow-md ">
+   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
+   <FcHome className="text-[#6D214F]"/>
+   <span className="text-gray-400">o1</span>
+   </p> 
+   <h2 className="text-xl md:text-2xl font-semibold p-4">Find Your Dream Home</h2>
+   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est </p>
+  <button 
+  className="transition-all duration-4.5   hover:bg-[#362ab9] w-full text-xl text-white font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
+    Find Home
+    </button>
+
+ </div>
+
+
+
+
+
+
+  {/* flexBox-2 */} 
+  <div className=" transition-all duration-4.5 w-[400px]   text-left p-9 shadow-md">
+   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
+   <FaHandshake className="text-[#878383]"/>
+   <span className="text-gray-400">o2</span>
+   </p> 
+   <h2 className="text-xl md:text-2xl font-semibold p-4">Builld Weaith with Ease.</h2>
+   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
+  <button className="hover:bg-[#166663] hover:text-white w-full text-xl font-semibold block bg-[#12CBC4] mx-auto mt-9 px-7 py-2 rounded-full">Find Home</button>
+
+ </div>
+
+
+
+
+
+  {/* flexBox-3 */} 
+  <div className="transition-all duration-4.5   w-[400px]  text-left p-9 shadow-md">
+   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
+   <SiHomeassistant className="text-[#6d6a6a]"/>
+   <span className="text-gray-400">o3</span>
+   </p> 
+   <h2 className="text-xl md:text-2xl font-semibold p-4">Love Home style</h2>
+   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
+  <button
+   className="hover:bg-[#2d239d] text-white w-full text-xl font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
+    Find Home
+    </button>
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 

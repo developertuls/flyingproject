@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Foterhome = () => {
  return (
-    <footer className="text-center md:text-center-0 bg-[#1B1464] text-white py-10 mt-10">
+    <footer className="text-center max-h-screen md:text-center-0 bg-[#0b082f] text-white py-10 mt-10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
@@ -28,7 +28,7 @@ export const Foterhome = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact</h3>
           <ul className="text-sm text-gray-300 space-y-2">
-            <li>Email: info@yourbrand.com</li>
+            <li>Email:marufbillah1295@gmail.com</li>
             <li>Phone: +880 1989850948</li>
             <li>Address: Dhaka, Bangladesh</li>
           </ul>

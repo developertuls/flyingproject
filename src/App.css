@@ -8,6 +8,11 @@
     background-position: center;
     background-size: cover;
 }
+.bggg{
+    background-image: url(images/flexbox.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
 .text-div{
    background-image: url(images/in.jpeg);

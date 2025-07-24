@@ -46,15 +46,16 @@ setActiv(path)
 
 
   {/* Desktopmenu */}
+  <div className=' md:w-[95%] mx-auto'>
   <div className='container mx-auto flex justify-between items-center'>
    <div>
     <h3 className='logo-animet'>
-      <span className='font-semibold md:text-4xl'>M</span>
-      <span className='font-semibold md:text-4xl'>A</span>
-      <span className='font-semibold md:text-4xl'>R</span>
-      <span className='font-semibold md:text-4xl'>U</span>
-      <span className='font-semibold md:text-4xl'>F</span>
-      <span className='font-semibold md:text-4xl'>De .</span>
+      <span className=' md:text-4xl'>M</span>
+      <span className=' md:text-4xl'>A</span>
+      <span className=' md:text-4xl'>R</span>
+      <span className=' md:text-4xl'>U</span>
+      <span className=' md:text-4xl'>F</span>
+      <span className=' md:text-4xl'>De .</span>
       </h3>
    </div>
 
@@ -108,7 +109,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
     <Link to={'/login'}>
     <button
     onClick={()=>ActivColor('/login')}
-     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#2efff8]  bg-[#2bcbba] px-6 py-2 md:text-2xl hidden md:block'}`}>
+     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#197b78] text-white bg-[#166663] px-6 py-2 md:text-2xl hidden md:block'}`}>
       Login
       </button>
       </Link>
@@ -153,6 +154,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     </ul>
 </div>
 
+  </div>
   </div>
 </nav>
   )
