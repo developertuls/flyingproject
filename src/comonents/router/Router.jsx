@@ -14,6 +14,7 @@ import{Contactus}from '../../pages/Contactus'
 import{Blog}from '../../pages/Blog'
 import { TbLogin2 } from "react-icons/tb";
 import { Lgin2 } from "../../pages/Lgin2";
+import BookingConfirmation from "../../pages/BookingConfirmation";
 
 
 
@@ -58,6 +59,13 @@ const router=createBrowserRouter([
 {
     path:'login',
     Component:Lgin2
+},
+
+
+
+{
+    path:'/booking-confirmation',
+    Component:BookingConfirmation
 }
 
 
