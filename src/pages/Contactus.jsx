@@ -3,6 +3,6 @@ import React from 'react'
 
 export const Contactus = () => {
   return (
-    <div>Contactus</div>
+    <div className=''>Contactus</div>
   )
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaHandshake } from "react-icons/fa";
 import { FcHome } from "react-icons/fc";
 import { SiHomeassistant } from "react-icons/si";
-
+import { motion } from "motion/react";
 
 export const Gellryhome = () => {
   return (
@@ -54,7 +54,7 @@ export const Gellryhome = () => {
             corrupti culpa molestiae voluptas eius numquam at aut debitis
             consequuntur! Ab, consectetur repellat.
           </p>
-          <Link to={'/go'}>
+          <Link>
           <button
            className= "transition-all duration-5.9 md:mx-0 hover:px-7 hover:py-3 hover:bg-[#2d7a77] mx-auto block bg-[#12CBC4] font-medium text-white px-6 py-2 rounded">
             Yourdesite
@@ -109,7 +109,12 @@ export const Gellryhome = () => {
 
 
   {/* flexBox-2 */} 
-  <div className=" transition-all duration-4.5 w-[400px]   text-left p-9 shadow-md">
+  <motion.div
+   initial={{ opacity: 0, y: -100 }}
+   whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+    viewport={{ once: true }}
+   className=" transition-all duration-4.5 w-[400px]   text-left p-9 shadow-md">
    <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
    <FaHandshake className="text-[#878383]"/>
    <span className="text-gray-400">o2</span>
@@ -118,7 +123,7 @@ export const Gellryhome = () => {
    <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
   <button className="hover:bg-[#166663] hover:text-white w-full text-xl font-semibold block bg-[#12CBC4] mx-auto mt-9 px-7 py-2 rounded-full">Find Home</button>
 
- </div>
+ </motion.div>
 
 
 

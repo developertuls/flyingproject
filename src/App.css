@@ -15,13 +15,13 @@
 }
 
 .text-div{
-   background-image: url(images/in.jpeg);
+   background-image: url(assets/in.jpeg);
     background-position: center;
     background-size: cover;
 }
 
 .from-bg{
-  background-image: url(images/ho.jpg);
+  background-image: url(assets/ho.jpg);
     background-position: center;
     background-size: cover;
 }

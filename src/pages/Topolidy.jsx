@@ -19,10 +19,38 @@ export const Topolidy = () => {
       img: "images/in4.jpeg",
       desc: "Adventure through the golden sands of Dubai."
     },
+
     {
       img: "images/in5.jpeg",
       desc: "Relax in the calm and green Amazon forest."
     },
+
+    {
+      img: "images/in5.jpeg",
+      desc: "Relax in the calm and green Amazon forest."
+    },
+    {
+      img: "images/in5.jpeg",
+      desc: "Relax in the calm and green Amazon forest."
+    },
+
+    {
+      img: "images/in5.jpeg",
+      desc: "Relax in the calm and green Amazon forest."
+    },
+    {
+      img: "images/in6.jpeg",
+      desc: "Island vibes and ocean breeze in Maldives."
+    },
+    {
+      img: "images/in6.jpeg",
+      desc: "Island vibes and ocean breeze in Maldives."
+    },
+    {
+      img: "images/in6.jpeg",
+      desc: "Island vibes and ocean breeze in Maldives."
+    },
+
     {
       img: "images/in6.jpeg",
       desc: "Island vibes and ocean breeze in Maldives."

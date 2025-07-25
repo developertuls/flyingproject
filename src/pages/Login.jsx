@@ -2,7 +2,8 @@
  
  
  import { motion } from "motion/react";
-import { useRef, useState } from "react";
+import {  useState } from "react";
+import { Link } from "react-router-dom";
 
  
  
@@ -15,14 +16,12 @@ import { useRef, useState } from "react";
 
 
  export const Login = () => {
- const [email, setEmail] = useState("");
+const [email, setEmail] = useState("");
  const [name, setName] = useState("");
  const [date, setDate] = useState("");
  const [price, setPrice] = useState("");
  const [phone, setPhone] = useState("");
- const fromRef=useRef(null)
 const [submiCplor,setSubmitColor]=useState(false)
-const [input,setInput]=useState('')
 
 
  const handleSubmit = (e) => {
@@ -76,6 +75,7 @@ setSubmitColor(!submiCplor)
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel provident eum cumque vitae veniam nobis, ratione voluptates velit omnis culpa quae optio. Illum eum cumque dolorum explicabo officiis.<br /><br />
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel provident eum cumque vitae veniam nobis.
             </p>
+            <Link to={'/like'}>
             <motion.button
             initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -84,6 +84,7 @@ setSubmitColor(!submiCplor)
              className="mt-6 bg-[#d35400] px-4 py-2 text-white text-lg md:text-2xl font-medium hover:bg-[#ff8534]">
               Get start Booking
             </motion.button>
+            </Link>
           </div>
         </div>
 
