@@ -11,22 +11,22 @@ export const Gellryhome = () => {
       <div className="flex flex-col md:flex-row container mx-auto px-4 gap-6">
 
         {/* Left side */}
-        <div className="w-full md:w-1/2 ">
-        
+        <div className="new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
+          backgroundImage:"url(https://plus.unsplash.com/premium_photo-1746387628298-af5695a3f935?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+        }}>
+{/*         
           <img
             src="images/bgg.jpg"
             alt="gallery"
             className="w-full h-auto object-cover "
-          />
+          /> */}
         </div>
 
         {/* Right side */}
         <div className="w-full md:w-1/2  p-4 ">
-          <h1 className="text-2xl font-bold mb-2">Bayshores Traditional</h1>
-          <span className=" mb-2 block">
-            Lorem ipsum, dolor sit amet consectetur ad
-          </span>
-          <p className="text-sm  mb-4">
+          <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Bayshores Traditional</h1>
+         
+          <p className="text-sm  mb-4 md:text-left text-justify">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
             corrupti culpa molestiae voluptas eius numquam at aut debitis
@@ -44,11 +44,9 @@ export const Gellryhome = () => {
       <div className="md:mt-9 flex flex-col md:flex-row container mx-auto px-4 gap-6">
         {/* Left side */}
       <div className="w-full md:w-1/2  p-4 ">
-          <h1 className="text-2xl font-bold mb-2">Your home and the outside view are really impressive</h1>
-          <span className=" mb-2 block">
-            Lorem ipsum, dolor sit amet consectetur ad
-          </span>
-          <p className="text-sm  mb-4">
+          <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Your home and the outside view are really impressive</h1>
+         
+          <p className="text-sm  mb-4 md:text-left text-justify">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
             corrupti culpa molestiae voluptas eius numquam at aut debitis
@@ -64,14 +62,17 @@ export const Gellryhome = () => {
 
         {/* Right side */}
         
-  <div className="w-full md:w-1/2 ">
+  <div className="new-2 w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
+    backgroundImage:"url(https://plus.unsplash.com/premium_photo-1747326386378-5635788ea82c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+  }} >
         
-          <img
+          {/* <img
             src="images/carhom.jpg"
             alt="gallery"
             className="w-full h-auto object-cover"
-          />
+          /> */}
         </div>
+       
 
 
 
@@ -80,8 +81,10 @@ export const Gellryhome = () => {
 
 
 {/* flexdiv */}
+
 <div className=" py-8 mt-[80px]  ">
-  <h1 className="text-xl md:text-4xl font-bold text-center "><span>Empowering</span> You through <br />Real Estste <span className="text-[#209c7d]">Solutions.</span> </h1>
+
+  <h1 className="text-2xl md:text-4xl font-bold text-center "><span>Empowering</span> You through <br />Real Estste <span className="text-[#209c7d]">Solutions.</span> </h1>
   
   
   
@@ -89,13 +92,13 @@ export const Gellryhome = () => {
 
     
    {/* flexBox-1 */} 
-  <div className="w-[400px]  text-left p-9 shadow-md ">
+  <div className="w-[400px]   p-9 shadow-md ">
    <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
    <FcHome className="text-[#6D214F]"/>
    <span className="text-gray-400">o1</span>
    </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4">Find Your Dream Home</h2>
-   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est </p>
+   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Find Your Dream Home</h2>
+   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est </p>
   <button 
   className="transition-all duration-4.5   hover:bg-[#362ab9] w-full text-xl text-white font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
     Find Home
@@ -119,8 +122,8 @@ export const Gellryhome = () => {
    <FaHandshake className="text-[#878383]"/>
    <span className="text-gray-400">o2</span>
    </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4">Builld Weaith with Ease.</h2>
-   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
+   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Builld Weaith with Ease.</h2>
+   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
   <button className="hover:bg-[#166663] hover:text-white w-full text-xl font-semibold block bg-[#12CBC4] mx-auto mt-9 px-7 py-2 rounded-full">Find Home</button>
 
  </motion.div>
@@ -135,8 +138,8 @@ export const Gellryhome = () => {
    <SiHomeassistant className="text-[#6d6a6a]"/>
    <span className="text-gray-400">o3</span>
    </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4">Love Home style</h2>
-   <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
+   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Love Home style</h2>
+   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
   <button
    className="hover:bg-[#2d239d] text-white w-full text-xl font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
     Find Home

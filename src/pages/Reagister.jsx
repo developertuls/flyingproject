@@ -1,12 +1,33 @@
 
-import React, { useState } from 'react'
+
+
+
+
+
+
+
+import  { useState } from 'react'
 import { motion } from 'motion/react'
-import { Link } from 'react-router-dom';
 
 
 
 
-export const Lgin2 = () => {
+
+
+
+
+
+
+export const Reagister = () => {
+
+
+
+
+
+
+
+
+
  const [email, setEmail] = useState("");
  const [name, setName] = useState("");
  const [password, setPassword] = useState("");
@@ -54,10 +75,8 @@ setSubmitColor(!submiCplor)
 
 
 
-
-
   return (
-    <div className='bgg   bg-[green] relativ md:mt-[99px] overflow-hidden'style={{
+     <div className='bgg   bg-[green] relativ md:mt-[99px] overflow-hidden'style={{
       backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661963505505-f992fa0a8630?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
     }}>
       <div className="absolute inset-0 bg-black bg-opacity-60 mt-9  md:h-[606px]"></div>
@@ -70,7 +89,7 @@ setSubmitColor(!submiCplor)
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
           <form  onSubmit={handleSubmit} className="absolute inset-0 bg-[#1B1464]/20 text-white text-center flex flex-col justify-center items-center px-4">
-            <h2 className="text-xl md:text-3xl mb-6">Get Login/ <Link to={'/reagister'}><span className='hover:underline underline-offset-4'>Reagister</span></Link></h2>
+            <h2 className="text-xl md:text-3xl mb-6">Get Reagister</h2>
 
             <input
             onChange={(e) => setName(e.target.value)}

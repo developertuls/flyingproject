@@ -26,7 +26,9 @@ const BookingConfirmation = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true }}
        className="md:mt-[99px] mt-9 bg-white shadow-lg rounded-xl p-8 max-w-md w-full">
-<h2 className="animate-bounce text-3xl font-bold text-green-600 mb-4">🎉 Booking Confirmed!</h2>
+  <h2 className="animate-bounce text-3xl font-bold text-green-600 mb-4">
+  🎉 Booking Confirmed!
+  </h2>
         
         
         <ul className=''>
@@ -48,7 +50,7 @@ const BookingConfirmation = () => {
         
         
         
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 mb-6 ">
           Your booking has been successfully completed. <br />
           Thank you for using our service!
         </p>
@@ -56,7 +58,8 @@ const BookingConfirmation = () => {
       </motion.div>
 
 
-        <Link to="/" className="font-medium mt-8 bg-green-600 text-white px-7 py-2 rounded hover:bg-green-700">
+        <Link to="/"
+         className="font-medium mt-8 bg-green-600 text-white px-7 py-2 rounded hover:bg-green-700">
           Go to Home
         </Link>
     </div>

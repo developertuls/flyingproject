@@ -51,9 +51,11 @@ export const Login = () => {
         <div className="text-div relative w-full md:w-[99%] h-[600px] md:h-[500px] overflow-hidden mb-5 md:mb-0">
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           <div className="absolute inset-0 p-4 md:p-9 text-white text-center md:text-left">
-            <h2 className="mt-7 md:mt-9 text-2xl md:text-3xl font-extrabold">someday is now.!</h2>
-            <p className="mt-4 text-lg font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel provident eum cumque vitae veniam nobis.
+            <h2 className="mt-[50px] md:mt-9 text-3xl md:text-3xl font-extrabold">someday is now.!</h2>
+            <p
+             className="mt-[67px] text-lg font-medium md:text-lef text-justify">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rerum, optio placeat officia porro at libero iste quod vel dolor fuga accusamus? Quidem ratione error, illo doloribus minima impedit quaerat amet ipsa possimus hic nemo perspiciatis explicabo deleniti similique placeat, minus optio veniam consectetur reiciendis!
             </p>
             <Link to={"/like"}>
               <motion.button
@@ -61,7 +63,7 @@ export const Login = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="mt-6 bg-[#d35400] px-4 py-2 text-white text-lg md:text-2xl font-medium hover:bg-[#ff8534]"
+                className="mt-9 bg-[#d35400] px-4 py-2 text-white text-lg md:text-2xl font-medium hover:bg-[#ff8534]"
               >
                 Get start Booking
               </motion.button>
@@ -83,7 +85,7 @@ export const Login = () => {
             onSubmit={handleSubmit}
             className="absolute inset-0 bg-teal-500/20 text-white text-center flex flex-col justify-center items-center px-4"
           >
-            <h2 className="text-xl md:text-3xl mb-6">Get Booking</h2>
+            <h2 className="text-2xl md:text-3xl mb-6 mt-[-50px] md:mt-0">Get Booking</h2>
 
             <input
               onChange={(e) => setName(e.target.value)}

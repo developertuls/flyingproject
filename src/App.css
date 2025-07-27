@@ -4,13 +4,22 @@
 
 
 .bgg{
-    background-image: url(assets/su.avif);
+    /* background-image: url('https://images.unsplash.com/photos/white-wooden-door-on-white-wall-x2aHsaLJZkc'); */
     background-position: center;
     background-size: cover;
 }
 .bggg{
     background-image: url(images/flexbox.jpg);
     background-position: center;
+    background-size: cover;
+}
+
+.new{
+   background-position: center;
+    background-size: cover;
+}
+.new-2{
+   background-position: center;
     background-size: cover;
 }
 
@@ -75,7 +84,9 @@
   background-repeat: no-repeat;
 }
 
-
+.text-lo{
+  font-family: sans-serif;
+}
 
 
 

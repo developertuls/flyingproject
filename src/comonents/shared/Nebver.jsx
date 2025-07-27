@@ -1,8 +1,10 @@
 
-import  {  useState } from 'react'
+
 import { FaBars} from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
+import { useState} from 'react';
 
 
 
@@ -15,6 +17,10 @@ import { Link } from 'react-router-dom';
 
 const Nebver = () => {
 
+
+
+
+  
 const [isopen ,setIsopen]=useState(false)
 const [Activ ,setActiv]=useState('')
 
@@ -40,27 +46,39 @@ setActiv(path)
 
 
 
-
   return (
-<nav className='bg-[#fff] py-4 md:py-6  fixed top-0 w-full z-50 shadow-md'>
+<motion.nav
+initial={{ opacity: 0, y: 100 ,scaleX:0}}
+whileInView={{ opacity: 1, y: 0 ,scaleX:1}}
+transition={{ duration: 0.5, ease: "easeOut" }}
+viewport={{ once: true }}
+
+  className='bg-white py-4 md:py-6 fixed top-0 w-full z-40 shadow-md transition-transform duration-500 ease-in-out
+ '  
+  
+        
+
+>
 
 
   {/* Desktopmenu */}
-  <div className=' md:w-[95%] mx-auto'>
+  <motion.div
+ 
+   className='w-full md:w-[95%] mx-auto'>
   <div className='container mx-auto flex justify-between items-center'>
    <div>
-    <h3 className='logo-animet'>
+    <h3 className='logo-animet ml-[25px] md:ml-0 text-2xl'>
       <span className=' md:text-4xl'>M</span>
       <span className=' md:text-4xl'>A</span>
       <span className=' md:text-4xl'>R</span>
       <span className=' md:text-4xl'>U</span>
       <span className=' md:text-4xl'>F</span>
-      <span className=' md:text-4xl'>De .</span>
+      <span className=' md:text-3xl '>De .</span>
       </h3>
    </div>
 
    {/* mobilemenu=Button */}
-<div className='md:hidden'>
+<div className='md:hidden ml-[209px]'>
   <button onClick={toggolMenu}>
 
     {
@@ -69,8 +87,13 @@ setActiv(path)
   </button>
 </div>
 
-    <ul className=' text-text md:text-2xl hidden md:flex gap-x-4 md:gap-x-6'>
-<li>
+    <motion.ul
+ 
+    
+     className=' text-text md:text-2xl hidden md:flex gap-x-4 md:gap-x-6'>
+<li
+
+>
   <Link 
 to={'/home'} onClick={()=>ActivColor('/home')}
  className={`text-[#006266] font-semibold ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>HOME
@@ -78,7 +101,11 @@ to={'/home'} onClick={()=>ActivColor('/home')}
  </li >
 
 
-<li>
+<li
+ initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+>
   <Link 
 to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagister'))}
  className={` ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>BOOKING
@@ -86,26 +113,35 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
  </li >
 
 
-     <li>
+     <li
+      initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+     >
       <Link to={'/contact'} onClick={()=>ActivColor('/contact')}
        className={` ${Activ==='/contact' ? 'font-bold':'hover:font-bold'}`}>CONTACT
        </Link>
        </li>
-     <li> 
+     <li
+ initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+
+     > 
       <Link to={'/blogs'}
       onClick={()=>ActivColor('/blogs')}
         className={`${Activ==='/blogs'? 'font-bold':'hover:font-bold'}`}>BLOGS
         </Link>
         </li>
-      <li>
+      <tli>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
          className={`${Activ=== '/like' ?'hover:font-bold':'hover:font-bold'}`} >
         
           LIKE HOME
-          </Link></li>
+          </Link></tli>
      
-    </ul>
+    </motion.ul>
     <Link to={'/login'}>
     <button
     onClick={()=>ActivColor('/login')}
@@ -114,29 +150,49 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
       </button>
       </Link>
 {/* mobile menu collapsed */}
-<div className={` md:hidden w-full absolute top-full left-0 transition-all duration-300 ease-in-out  ${isopen ?'block max-h-[500px] ':'hidden max-h-0'}`}>
-  <ul className='flex flex-col items-center bg-blue-500 py-4'>
+<div className={` md:hidden w-full absolute   top-full left-0 transition-all duration-300 ease-in-out  ${isopen ?'block max-h-[500px] ':'hidden max-h-0'}`}>
+  <motion.ul
+ initial={{ opacity: 0, y: -100 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.7, ease: "easeOut" }}
+viewport={{ once: true }}
+
+
+  
+   className='py-6 flex flex-col items-center bg-[#130f40]/90 text-white font-bold'>
+
+
+<li>
+  <Link 
+to={'/home'} onClick={()=>ActivColor('/home')}
+ className={`text-[#ffa502]  font-semibold ${Activ === '/booking'? '  font-bold':'font-bold'}`}>HOME
+ </Link>
+ </li >
+
+
+
+
   <li>
   <Link 
 to={'/booking'} onClick={()=>ActivColor('/booking')}
- className={`text-[#3c40c6] ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>BOOKING
+ className={` ${Activ === '/booking'? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>BOOKING
  </Link>
  </li >
      <li>
       <Link to={'/contact'} onClick={()=>ActivColor('/contact')}
-       className={` ${Activ==='/contact' ? 'font-bold':'hover:font-bold'}`}>CONTACT
+       className={` ${Activ==='/contact' ? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>CONTACT
        </Link>
        </li>
      <li> 
       <Link to={'/blogs'}
       onClick={()=>ActivColor('/blogs')}
-        className={`${Activ==='/blogs'? 'font-bold':'hover:font-bold'}`}>BLOGS
+        className={`${Activ==='/blogs'? 'text-[#3c40c6]   font-bold':'hover:font-bold'}`}>BLOGS
         </Link>
         </li>
       <li>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
-         className={`${Activ=== '/like' ?'hover:font-bold':'hover:font-bold'}`} >
+         className={`${Activ=== '/like' ?'text-[#3c40c6] font-bold':'hover:font-bold'}`} >
         
           LIKE HOME
           </Link></li>
@@ -145,18 +201,18 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     <Link to={'/login'}>
     <button
     onClick={()=>ActivColor('/login')}
-     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#2efff8]  bg-[#2bcbba] px-6 py-2 md:text-2xl hidden md:block'}`}>
+     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2  ':'hover:bg-[#2efff8]  bg-[#2bcbba] px-6 py-2 md:text-2xl mt-5'}`}>
       Login
       </button>
       </Link>
   
    
-    </ul>
+    </motion.ul>
 </div>
 
   </div>
-  </div>
-</nav>
+  </motion.div>
+</motion.nav>
   )
 }
 

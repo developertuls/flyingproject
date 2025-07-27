@@ -7,9 +7,11 @@ export const Foterhome = () => {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">YourBrand</h2>
+          <h2 className="text-2xl font-bold mb-4">MARUF DE.</h2>
           <p className="text-sm text-gray-400">
+           
             Your one-stop solution for amazing travel experiences. Explore destinations, book tours, and plan your holiday today.
+          
           </p>
         </div>
 
