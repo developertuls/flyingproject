@@ -6,10 +6,10 @@ import {Login} from "../../pages/Login";
 import {Topolidy} from "../../pages/Topolidy";
 import {Contactus} from "../../pages/Contactus";
 import {Blog} from "../../pages/Blog";
-import {Lgin2} from "../../pages/Lgin2";
+import {Lgin2} from "../auth/Lgin2";
 import BookingConfirmation from "../../pages/BookingConfirmation";
 import {HolidayDetails} from "../../pages/HolidayDetails";
-import { Reagister } from "../../pages/Reagister";
+import { Reagister } from "../auth/Reagister";
 
 
 
