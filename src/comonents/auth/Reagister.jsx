@@ -10,9 +10,15 @@ import  { useState } from 'react'
 import { motion } from 'motion/react'
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaRegEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth } from '../../firbease/firbease.config';
+import Swal from 'sweetalert2';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider } from 'firebase/auth';
+
 
 
 
@@ -22,12 +28,119 @@ import { IoMdEyeOff } from "react-icons/io";
 
 export const Reagister = () => {
 
-
 const [showpass,setShowpass]=useState(false)
 const [showconpass,setShowconpass]=useState(false)
+const [errormsg,setErrormsg]=useState('')
+const [successmsg,setSuccessmsg]=useState('')
+const navigaet=useNavigate()
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+
+const goolgleProvider=new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+
+
+const hendelsubmit=(e)=>{
+  e.preventDefault()
+  const name= e.target.name.value;
+  const email= e.target.email.value;
+  const password= e.target.password.value;
+  const confrimpassword= e.target.confrimpassword.value;
+
+  if(password !== confrimpassword){
+ setErrormsg('Password do not match.')
+ return;
+  }
+
+if(!passwordRegex.test(confrimpassword)){
+setErrormsg("Must contain at least one uppercase, one lowercase, one number, one special character and be at least 6 characters long");
+return;
+}
 
 
 
+
+  createUserWithEmailAndPassword(auth,email,password)
+  .then(result=>{
+const user=result.user;
+console.log(user)
+setErrormsg('');
+e.target.reset();
+
+Swal.fire({
+  title: "Good job!",
+  text: "You Reagister success!",
+  icon: "success"
+});
+
+
+setTimeout(()=>{
+  setSuccessmsg('')
+navigaet('/login')
+},2000);
+
+
+
+  })
+  .catch(err=>{
+    console.error(err);
+    setErrormsg(err.message);
+    setSuccessmsg('')
+  })
+  console.log('name',name,'email',email,'passord',password,'confrimpass',confrimpassword);
+  
+  
+}
+
+
+
+
+// goolgleBtn
+const goolgleBtn=()=>{
+signInWithPopup(auth,goolgleProvider) 
+ .then(result=>{
+const userinfo=result.user;
+  console.log(userinfo)
+
+ Swal.fire({
+  title: "Good job!",
+  text: "You Reagister success!",
+  icon: "success"
+}); 
+
+setTimeout(()=>{
+  setSuccessmsg('')
+navigaet('/login')
+},2000);
+
+ })
+ .catch(err=>{
+  console.error(err);
+ })
+}
+
+
+
+
+// GitHubBtn
+const GitHubeBtn=()=>{
+signInWithPopup(auth,githubProvider)
+.then(result=>{
+const userinfo=result.user;
+console.log(userinfo)
+
+ Swal.fire({
+  title: "Good job!",
+  text: "You Reagister success!",
+  icon: "success"
+}); 
+setTimeout(()=>{
+  setSuccessmsg('')
+navigaet('/login')
+},2000);
+
+})
+
+}
 
 
 
@@ -39,119 +152,23 @@ const [showconpass,setShowconpass]=useState(false)
 
 
   return (
-//      <div className='bgg  mt-[70px] bg-[green] relativ md:mt-[100px] overflow-hidden'style={{
-//       backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661963505505-f992fa0a8630?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
-//     }}>
-//       {/* <div className="absolute inset-0 bg-black bg-opacity-60 mt-9  md:h-[804px]"></div> */}
-//  <motion.div
-//         initial={{ opacity: 0, y: 100 }} // 
-//         whileInView={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.9, ease: "easeOut" }}
-//         viewport={{ once: true }}
-//          className="mx-auto relative w-full md:w-1/2 h-[700px] md:h-[700px] overflow-hidden">
-//           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-
-//           <form  onSubmit={handleSubmit} className="  absolute inset-0 bg-[#1B1464]/20 text-white text-center flex flex-col justify-center items-center px-4">
-//             <h2 className="text-2xl md:text-3xl mb-6  mt-4 ">Get Reagister</h2>
-
-//             <input
-//             onChange={(e) => setName(e.target.value)}
-//               className="input-bg w-[70%] p-3  placeholder:text-2xl  text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-//               type="text" name="name" placeholder="Your Full name"
-//               value={name}
-//             required/>
-
-
-
-//             <input
-//              onChange={(e) => setEmail(e.target.value)}
-//               className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-//               type="email" name="email" placeholder="Your Email"
-//               value={email}
-//             required/>
-
-
-//             <input
-//              onChange={(e) => setPassword(e.target.value)}
-//               className="input-bg  w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-//               type="password" name="password" placeholder="Your Password"
-//               value={password}
-//             required/>
-
-       
-
-
-
-
-
-//             <input
-//              onChange={(e) => setConfrem(e.target.value)}
-//               className="input-bg w-[70%] p-3 placeholder:text-2xl text-[#000] outline-0 border-2 focus:border-[#b71540] rounded-sm mb-4"
-//               type="password" name="password" placeholder="Your Confirm password"
-//               value={confrem}
-//             required/>
-
-
-
-
-
-
-//       <span className='hover:text-[#30ac30] hover:underline underline-offset-4  text-left md:ml-[275px]  text-xl hover:cursor-pointer'>
-//            Forgot Password
-//         </span>
-          
-
-          
-
-
-
-// <button
-// onClick={()=>submitColor(submiCplor)}
-
-//   type="submit"
-//   className={`${submiCplor ?'bg-[red] py-2 px-6 text-lg md:text-2xl font-semibold w-[70%]':' bg-[#00d2d3] hover:bg-[#1d6d6d] mt-4 py-2 px-6 text-lg md:text-2xl font-semibold w-[70%]'}`}>
-//   Submit
-// </button>
-
-
-// {/* Divider */}
-// <div className='flex justify-between  items-center md:w-[70%] w-[60%]  gap-x-3'>
-// <hr className='border border-[#ebeaea] block md:w-[80%] w-[70%] mt-9'/>
-// <span className='block text-xl mt-7 md:mt-6 '>OR</span>
-// <hr className='border border-[#ebeaea] block md:w-[80%] w-[70%] mt-9'/>
-// </div>
-// {/* Login google,github,email teh div */}
-  
-//  <button
-//    className=" py-2 px-6 bg-[#fff] hover:bg-[#dddada] w-[70%] mt-9 flex gap-x-2  md:text-xl justify-center items-center font-semibold text-black">
-//             <FcGoogle className='text-xl'/> Reagister with Goolgle
-//           </button>
-//           <button
-//            className="py-2 px-6 bg-[#fff] hover:bg-[#dddada]  w-[70%] mt-3 flex gap-x-3 md:text-xl justify-center items-center font-semibold text-black" 
-//           >
-//           <IoLogoGithub className='text-xl'/>Reagister with GitHub
-//           </button>
-//           <p className='text-lg mt-4 pb-8'>Already have an account? 
-//              <Link to={'/login'}
-
-//            className='hover:underline text-[#3fe23f] underline-offset-4 hover:font-semibold'>Login Now
-//            </Link></p>
-
-  
-//           </form>
-//         </motion.div>
-
-
-    
-//     </div>
-
-<div className="flex justify-center items-center bg-[green] h-[100vh] mt-[170px]">
-      <div className=" bg-white max-w-lg p-5">
-        <h2 className="text-black font-bold text-center text-2xl mb-6">Reagister</h2>
-        <form className="space-y-4 bg-[#1B1464]/20">
+<div className=" relative  flex justify-center items-center bg-[green] h-[140vh] mt-[99px]"
+    style={{
+      backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661963505505-f992fa0a8630?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+    }}
+>
+      <motion.div
+       initial={{ opacity: 0, y: 100 }} // 
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+       className="bgg relative  md:w-[36%] p-5  bg-[#0e0a32]/60 ">
+         {/* <div className=" bg-black bg-opacity-60 "></div> */}
+        <h2 className="text-white font-bold text-center md:text-3xl mb-6 text-2">Reagister</h2>
+        <form onSubmit={hendelsubmit} className="space-y-4 bg-[#1B1464]/20">
           <input
            type="text"
-           className="w-full border outline-none px-4 py-2 rounded focus:ring-2 focus:ring-[#e67e22]"
+           className="w-full border outline-none px-4 py-3 placeholder:text-2xl rounded focus:ring-2 focus:ring-[#e67e22]"
            placeholder="Yor Full Name"
             name="name" 
             id=""
@@ -162,9 +179,9 @@ const [showconpass,setShowconpass]=useState(false)
 
           <input
            type="email"
-           className="w-full border outline-none px-4 py-2 rounded focus:ring-2 focus:ring-[#e67e22]"
+           className="w-full border placeholder:text-2xl   outline-none px-4 py-3 rounded focus:ring-2 focus:ring-[#e67e22]"
            placeholder="Yor Email"
-            name="" 
+            name="email" 
             id=""
             required
              />
@@ -176,14 +193,14 @@ const [showconpass,setShowconpass]=useState(false)
      <div className='relative flex items-center '>
 <input
            type={showpass ?'text' :'password'}
-           className="w-full border outline-none px-4 py-2 rounded focus:ring-2 focus:ring-[#e67e22]"
+           className="w-full border outline-none px-4 py-3 placeholder:text-2xl  rounded focus:ring-2 focus:ring-[#e67e22]"
            placeholder="Your Password"
-            name=""
+            name="password"
              id=""
              required
               />
 
-{showpass ? <IoMdEyeOff  onClick={()=>setShowpass(!showpass)}  className='text-[red] absolute right-2 cursor-pointer'/>:<FaRegEye onClick={()=>setShowpass(!showpass)} className="text-[red] absolute right-2 cursor-pointer"/>
+{showpass ? <IoMdEyeOff  onClick={()=>setShowpass(!showpass)}  className='text-[#dcd8d8] absolute right-2 cursor-pointer text-2xl'/>:<FaRegEye onClick={()=>setShowpass(!showpass)} className="text-[#dcd8d8] text-2xl absolute right-2 cursor-pointer"/>
 }
 
 
@@ -195,14 +212,14 @@ const [showconpass,setShowconpass]=useState(false)
 
  <input
            type={showconpass?'text' :'password'}
-           className="w-full border outline-none px-4 py-2 rounded focus:ring-2 focus:ring-[#e67e22]"
+           className="w-full border outline-none placeholder:text-2xl  px-4 py-3 rounded focus:ring-2 focus:ring-[#e67e22]"
            placeholder="Your Confrim Password"
-            name=""
+            name="confrimpassword"
              id="" 
              required
              />
 
-{showconpass ? <IoMdEyeOff onClick={()=>setShowconpass(!showconpass)} className='text-[red] absolute right-2 cursor-pointer' />:<FaRegEye onClick={()=>setShowconpass(!showconpass)} className="text-[red] absolute right-2 cursor-pointer"/>
+{showconpass ? <IoMdEyeOff onClick={()=>setShowconpass(!showconpass)} className='text-[#dcd8d8] absolute right-2 cursor-pointer text-2xl' />:<FaRegEye onClick={()=>setShowconpass(!showconpass)} className="text-[#dcd8d8] text-2xl absolute right-2 cursor-pointer"/>
 }
 
 
@@ -214,7 +231,13 @@ const [showconpass,setShowconpass]=useState(false)
 
 
 </div>
-         
+  {
+    errormsg && <p className="text-[red] text-center justify-center animate-bounce">{errormsg}</p>
+  }   
+
+  {
+    successmsg && <p className="text-[#2acb2a] text-xl text-center justify-center animate-bounce">{successmsg}</p>
+  }       
 
 <div className='flex items-center justify-between'>
 <p>
@@ -222,13 +245,14 @@ const [showconpass,setShowconpass]=useState(false)
    type="checkBox"
    name=''
    id='checkBox'
+   required
     />
-    <label htmlFor="checkBox">Accept trems & <Link className='text-[green] hover:underline underline-offset-4'>condition</Link> </label>
+    <label htmlFor="checkBox" className='text-white'>Accept trems & <Link className='text-[#27e327] hover:underline underline-offset-4'>condition</Link> </label>
 </p>
 
 
   <p
-   className='hover:text-[#30ac30] hover:underline underline-offset-4  text-right   text-xl hover:cursor-pointer'>
+   className='hover:text-[#46ff46] text-white hover:underline underline-offset-4  text-right   text-xl hover:cursor-pointer'>
            Forgot Password
       
 </p>
@@ -239,7 +263,7 @@ const [showconpass,setShowconpass]=useState(false)
 
         <button
         type="submit"
-         className="w-full   bg-[#00d2d3] hover:bg-[#1d6d6d] py-2 px-6 text-lg md:text-2xl font-semibold rounded cursor-pointer">
+         className="w-full text-white   bg-[#00d2d3] hover:bg-[#1d6d6d] py-2 px-6 text-lg md:text-2xl font-semibold rounded cursor-pointer">
           Reagister
         </button>
 
@@ -247,9 +271,9 @@ const [showconpass,setShowconpass]=useState(false)
 
 {/* divider */}
 <div className="flex items-center my-6">
-  <div className="flex-grow h-px bg-[red] "></div>
-  <span className="text-[red] mx-4">OR</span>
-  <div className="flex-grow h-px bg-[red]"></div>
+  <div className="flex-grow h-px bg-[#e1dddd] "></div>
+  <span className="text-[#e1dddd] mx-4">OR</span>
+  <div className="flex-grow h-px bg-[#e1dddd]"></div>
 </div>
 
 
@@ -260,21 +284,21 @@ const [showconpass,setShowconpass]=useState(false)
 
 
 <div className="text-black flex flex-col space-y-3 mt-3">
-<button className=" py-2 px-6 bg-[#fff] hover:bg-[#dddada] rounded flex justify-center items-center gap-x-2">
-  Reagister with Goolgle  <FcGoogle className='text-xl'/> 
+<button onClick={goolgleBtn} className=" py-2 px-6 bg-[#fff] hover:bg-[#dddada] rounded flex justify-center items-center gap-x-2 text-xl ">
+  Reagister with Goolgle  <FcGoogle className='text-2xl'/> 
 </button>
 
 
 
-<button className=" py-2 px-6 bg-[#fff] hover:bg-[#dddada] rounded flex justify-center items-center gap-x-2">
-  Reagister with GitHub <IoLogoGithub className='text-xl'/>
+<button onClick={GitHubeBtn} className=" py-2 px-6 bg-[#fff] hover:bg-[#dddada] rounded flex justify-center items-center gap-x-2 text-xl">
+  Reagister with GitHub <IoLogoGithub className='text-2xl'/>
 </button>
 
 </div>
 
 
-<div className="text-black">
-     <p className='text-lg mt-4 pb-8 text-center '>Already have an account?  
+<div className="text-white">
+     <p className='text-lg mt-4 pb-8 text-center '>Already have an account ?  
              <Link to={'/login'}
 
            className='hover:underline text-[#3fe23f] underline-offset-4 hover:font-semibold'> Login Now
@@ -288,7 +312,7 @@ const [showconpass,setShowconpass]=useState(false)
 
 
 
-      </div>
+      </motion.div>
     </div>
 
 

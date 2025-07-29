@@ -133,13 +133,13 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
         className={`${Activ==='/blogs'? 'font-bold':'hover:font-bold'}`}>BLOGS
         </Link>
         </li>
-      <tli>
+      <li>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
          className={`${Activ=== '/like' ?'hover:font-bold':'hover:font-bold'}`} >
         
           LIKE HOME
-          </Link></tli>
+          </Link></li>
      
     </motion.ul>
     <Link to={'/login'}>
