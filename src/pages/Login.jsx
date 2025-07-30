@@ -4,16 +4,25 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AlertBox } from "./AlertBox";
 
-export const Login = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [date, setDate] = useState("");
-  const [price, setPrice] = useState("");
-  const [phone, setPhone] = useState("");
-  const [submiCplor, setSubmitColor] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
 
+
+
+
+export const Login = () => {
+  const [email,setEmail]=useState("");
+  const [name,setName]=useState("");
+  const [date,setDate]=useState("");
+  const [price,setPrice]=useState("");
+  const [phone,setPhone]=useState("");
   const navigate = useNavigate();
+  const [submiCplor,setSubmitColor]=useState(false);
+  const [showAlert,setShowAlert] = useState(false);
+
+
+
+
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,21 +39,35 @@ export const Login = () => {
     setPrice("");
     setDate("");
 
+
     // Redirect after 2 seconds
     setTimeout(() => {
       navigate("/booking-confirmation", { state: formData });
     }, 2000);
+
+
+
+
   };
+
+
+
 
   return (
     <div className="min-h-screen py-10 md:mt-[40px]">
-      {/* 🔔 Alert Box */}
-      {showAlert && (
-        <AlertBox
-          message="Booking submitted successfully! Redirecting..."
-          onClose={() => setShowAlert(false)}
-        />
-      )}
+
+    {/* 🔔 Alert Box */}
+    {showAlert && (
+    <AlertBox
+    message="Booking submitted successfully! Redirecting..."
+    onClose={() => setShowAlert(false)}
+    />
+    )}
+
+
+
+
+
 
       <div className="p-9 container mx-auto flex flex-col md:flex-row md:gap-x-5 md:w-[90%] justify-center items-stretch px-4">
         {/* Left side */}
@@ -71,7 +94,13 @@ export const Login = () => {
           </div>
         </div>
 
+
+
+
+
+
         {/* Right side form */}
+        
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}

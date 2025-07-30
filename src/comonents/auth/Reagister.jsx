@@ -68,7 +68,7 @@ e.target.reset();
 
 Swal.fire({
   title: "Good job!",
-  text: "You Reagister success!",
+  text: "Your Reagister success!",
   icon: "success"
 });
 
@@ -86,7 +86,7 @@ navigaet('/login')
     setErrormsg(err.message);
     setSuccessmsg('')
   })
-  console.log('name',name,'email',email,'passord',password,'confrimpass',confrimpassword);
+  
   
   
 }
@@ -103,7 +103,7 @@ const userinfo=result.user;
 
  Swal.fire({
   title: "Good job!",
-  text: "You Reagister success!",
+  text: "Your Reagister success!",
   icon: "success"
 }); 
 
@@ -130,7 +130,7 @@ console.log(userinfo)
 
  Swal.fire({
   title: "Good job!",
-  text: "You Reagister success!",
+  text: "Your Reagister success!",
   icon: "success"
 }); 
 setTimeout(()=>{
@@ -152,7 +152,7 @@ navigaet('/login')
 
 
   return (
-<div className=" relative  flex justify-center items-center bg-[green] h-[140vh] mt-[99px]"
+<div className=" relative  flex justify-center items-center bg-[green] mt-[66px]  md:mt-[99px]"
     style={{
       backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661963505505-f992fa0a8630?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
     }}
@@ -162,9 +162,9 @@ navigaet('/login')
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-       className="bgg relative  md:w-[36%] p-5  bg-[#0e0a32]/60 ">
+       className="bgg relative  md:w-[36%] p-5  bg-[#0e0a32]/70 ">
          {/* <div className=" bg-black bg-opacity-60 "></div> */}
-        <h2 className="text-white font-bold text-center md:text-3xl mb-6 text-2">Reagister</h2>
+        <h2 className="text-white font-bold text-center md:text-3xl mb-6 text-3xl">Reagister</h2>
         <form onSubmit={hendelsubmit} className="space-y-4 bg-[#1B1464]/20">
           <input
            type="text"

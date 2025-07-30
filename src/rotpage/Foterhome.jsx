@@ -1,10 +1,17 @@
 
 import React from 'react'
+import { IoLogoGithub } from "react-icons/io5";
+import { CiFacebook } from "react-icons/ci";
+
+
+
+
+
 
 export const Foterhome = () => {
  return (
-    <footer className="text-center  md:text-center-0 bg-[#0b082f] text-white py-10 mt-10">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="text-center  md:text-center-0 bg-[#0b082f] text-white py-[70px] ">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-x-8">
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold mb-4">MARUF DE.</h2>
@@ -40,15 +47,15 @@ export const Foterhome = () => {
         <div className='mx-auto '>
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <div className=" flex space-x-4 text-gray-300">
-            <a href="#" className="hover:text-white">Facebook</a>
-            <a href="#" className="hover:text-white">Instagram</a>
+            <a href="#" className="hover:text-white bg-[#2d2da9] rounded-full text-2xl"><CiFacebook /></a>
+            <a href="https://github.com/developertuls?tab=repositories" className="text-white text-2xl"><IoLogoGithub/></a>
             
           </div>
         </div>
       </div>
 
       <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Designe by Maruf All rights reserved .
+        © {new Date().getFullYear()} Designer by Maruf All rights reserved .
       </div>
     </footer>
   );

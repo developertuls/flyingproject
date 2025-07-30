@@ -1,19 +1,16 @@
+
+import { RouterProvider } from "react-router-dom";
+import router from "./comonents/router/Router";
+import ScrollToTop from './comonents/ScrollToTop';
 import './index.css'; //
 import './App.css';
-
-
-import { Rot } from './rotpage/Rot';
-
-
-
-
 function App() {
   return (
-
-      <Rot />
-  
+    <>
+      <ScrollToTop /> {/* 👈 এটা এখানে */}
+      <RouterProvider router={router} />
+    </>
   );
 }
 
 export default App;
-

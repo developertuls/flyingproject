@@ -24,15 +24,16 @@ const Nebver = () => {
 const [isopen ,setIsopen]=useState(false)
 const [Activ ,setActiv]=useState('')
 
-const toggolMenu=()=>{
 
+
+
+const toggolMenu=()=>{
 setIsopen(!isopen)
 
 }
 
 
 const ActivColor=(path)=>{
-
 setActiv(path)
 
 }
@@ -75,12 +76,20 @@ viewport={{ once: true }}
       <span className=' md:text-4xl'>F</span>
       <span className=' md:text-3xl '>De .</span>
       </h3>
+      
    </div>
 
+
+
+
+
+
+
+
    {/* mobilemenu=Button */}
+
 <div className='md:hidden ml-[209px]'>
   <button onClick={toggolMenu}>
-
     {
       isopen ? <IoMdClose size={24} />:<FaBars size={22} />
     }
@@ -88,12 +97,8 @@ viewport={{ once: true }}
 </div>
 
     <motion.ul
- 
-    
      className=' text-text md:text-2xl hidden md:flex gap-x-4 md:gap-x-6'>
-<li
-
->
+<li>
   <Link 
 to={'/home'} onClick={()=>ActivColor('/home')}
  className={`text-[#006266] font-semibold ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>HOME
@@ -110,7 +115,7 @@ to={'/home'} onClick={()=>ActivColor('/home')}
 to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagister'))}
  className={` ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>BOOKING
  </Link>
- </li >
+ </li>
 
 
      <li
@@ -149,6 +154,10 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
       Login
       </button>
       </Link>
+
+
+
+
 {/* mobile menu collapsed */}
 <div className={` md:hidden w-full absolute   top-full left-0 transition-all duration-300 ease-in-out  ${isopen ?'block max-h-[500px] ':'hidden max-h-0'}`}>
   <motion.ul
@@ -156,10 +165,10 @@ to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagi
 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.7, ease: "easeOut" }}
 viewport={{ once: true }}
-
-
-  
    className='py-6 flex flex-col items-center bg-[#130f40]/90 text-white font-bold'>
+
+
+
 
 
 <li>
@@ -167,7 +176,7 @@ viewport={{ once: true }}
 to={'/home'} onClick={()=>ActivColor('/home')}
  className={`text-[#ffa502]  font-semibold ${Activ === '/booking'? '  font-bold':'font-bold'}`}>HOME
  </Link>
- </li >
+ </li>
 
 
 
@@ -177,18 +186,34 @@ to={'/home'} onClick={()=>ActivColor('/home')}
 to={'/booking'} onClick={()=>ActivColor('/booking')}
  className={` ${Activ === '/booking'? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>BOOKING
  </Link>
- </li >
+ </li>
+
+
+
+
      <li>
       <Link to={'/contact'} onClick={()=>ActivColor('/contact')}
        className={` ${Activ==='/contact' ? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>CONTACT
        </Link>
        </li>
+
+
+
+
+
+
      <li> 
       <Link to={'/blogs'}
       onClick={()=>ActivColor('/blogs')}
         className={`${Activ==='/blogs'? 'text-[#3c40c6]   font-bold':'hover:font-bold'}`}>BLOGS
         </Link>
         </li>
+
+
+
+
+
+
       <li>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
@@ -200,9 +225,11 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
   
     <Link to={'/login'}>
     <button
+    
     onClick={()=>ActivColor('/login')}
      className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2  ':'hover:bg-[#2efff8]  bg-[#2bcbba] px-6 py-2 md:text-2xl mt-5'}`}>
-      Login
+    Login
+
       </button>
       </Link>
   

@@ -5,25 +5,26 @@ import { FcHome } from "react-icons/fc";
 import { SiHomeassistant } from "react-icons/si";
 import { motion } from "motion/react";
 
+
+
+
 export const Gellryhome = () => {
   return (
     <div className=" py-10 ">
-      <div className="flex flex-col md:flex-row container mx-auto px-4 gap-6">
+    <div className="flex flex-col md:flex-row container mx-auto px-4 gap-6">
 
         {/* Left side */}
         <div className="new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
           backgroundImage:"url(https://plus.unsplash.com/premium_photo-1746387628298-af5695a3f935?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
         }}>
-{/*         
-          <img
-            src="images/bgg.jpg"
-            alt="gallery"
-            className="w-full h-auto object-cover "
-          /> */}
+
+
+
+
         </div>
 
         {/* Right side */}
-        <div className="w-full md:w-1/2  p-4 ">
+        <div className="w-full md:w-1/2 md:mt-[75px] p-4 ">
           <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Bayshores Traditional</h1>
          
           <p className="text-sm  mb-4 md:text-left text-justify">
@@ -43,7 +44,7 @@ export const Gellryhome = () => {
       </div>
       <div className="md:mt-9 flex flex-col md:flex-row container mx-auto px-4 gap-6">
         {/* Left side */}
-      <div className="w-full md:w-1/2  p-4 ">
+      <div className="w-full md:w-1/2 md:mt-[99px] p-4 ">
           <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Your home and the outside view are really impressive</h1>
          
           <p className="text-sm  mb-4 md:text-left text-justify">
@@ -63,7 +64,7 @@ export const Gellryhome = () => {
         {/* Right side */}
         
   <div className="new-2 w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
-    backgroundImage:"url(https://plus.unsplash.com/premium_photo-1747326386378-5635788ea82c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+    backgroundImage:"url(https://plus.unsplash.com/premium_photo-1686782502813-51579b55f6d8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
   }} >
         
           {/* <img

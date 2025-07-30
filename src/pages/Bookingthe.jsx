@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Bookingthe = () => {
   return (
-    <div className="bg-[#f6f4f4] min-h-screen py-10 text-[#000]">
+    <div className="bg-[#f6f4f4] min-h-screen py-[90px] text-[#000] mt-9 overflow-hidden">
       <h1 className="text-center text-[#000] text-3xl md:text-4xl py-6  font-bold mb-10">Testimonials</h1>
 
       <div className="gap-x-5 container mt-[90px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4">

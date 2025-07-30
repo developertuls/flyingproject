@@ -16,7 +16,7 @@ export const Rot = () => {
       <Outlet />
 
       {/* Footer */}
-      <Foterhome />
+      <Foterhome/>
      {/* <BookingConfirmation/> */}
     
  
