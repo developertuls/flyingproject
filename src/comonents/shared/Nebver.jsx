@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useState} from 'react';
-
+import { GiAirplaneDeparture } from "react-icons/gi";
 
 
 
@@ -67,15 +67,10 @@ viewport={{ once: true }}
  
    className='w-full md:w-[95%] mx-auto'>
   <div className='container mx-auto flex justify-between items-center'>
-   <div>
-    <h3 className='logo-animet ml-[25px] md:ml-0 text-2xl'>
-      <span className=' md:text-4xl'>M</span>
-      <span className=' md:text-4xl'>A</span>
-      <span className=' md:text-4xl'>R</span>
-      <span className=' md:text-4xl'>U</span>
-      <span className=' md:text-4xl'>F</span>
-      <span className=' md:text-3xl '>De .</span>
-      </h3>
+   <div className="  text-2xl flex justify-center items-center">
+   <GiAirplaneDeparture className=" font-bold  text-3xl text-[#B33771] " />
+<h3 className="text-[#4834d4] font-bold"> <span className="font-bold">T</span>ravels</h3>
+     
       
    </div>
 

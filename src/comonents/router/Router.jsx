@@ -11,6 +11,8 @@ import BookingConfirmation from "../../pages/BookingConfirmation";
 import { HolidayDetails } from "../../pages/HolidayDetails";
 import { Reagister } from "../auth/Reagister";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +27,9 @@ const router = createBrowserRouter([
       { path: "login", element: <Lgin2 /> },
       { path: "booking-confirmation", element: <BookingConfirmation /> },
       { path: "holiday/:id", element: <HolidayDetails /> },
-      { path: "reagister", element: <Reagister /> }
+      { path: "reagister", element: <Reagister /> },
+      
+    
     ]
   },
 ]);
