@@ -62,7 +62,7 @@ Swal.fire({
 
 setTimeout(()=>{
   setSuccessmsg('')
-navigaet('/')
+navigaet('/booking')
 },2000);
 
  })
@@ -105,7 +105,7 @@ const userinfo=result.user;
 
 setTimeout(()=>{
   setSuccessmsg('')
-navigaet('/')
+navigaet('/booking')
 },2000);
 
  })
@@ -131,7 +131,7 @@ console.log(userinfo)
 }); 
 setTimeout(()=>{
   setSuccessmsg('')
-navigaet('/')
+navigaet('/booking')
 },2000);
 
 })

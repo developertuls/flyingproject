@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useState} from 'react';
 import { GiAirplaneDeparture } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -20,7 +21,7 @@ const Nebver = () => {
 
 
 
-  
+const naviget=useNavigate()  
 const [isopen ,setIsopen]=useState(false)
 const [Activ ,setActiv]=useState('')
 
@@ -39,7 +40,13 @@ setActiv(path)
 }
 
 
+const gotologin=()=>{
+alert('Please Login or /Reagister')
+naviget("/login")
 
+
+
+}
 
 
 
@@ -102,12 +109,13 @@ to={'/home'} onClick={()=>ActivColor('/home')}
 
 
 <li
+onClick={gotologin}
  initial={{ opacity: 0, x: 50 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.6 }}
 >
   <Link 
-to={'/booking'} onClick={()=>ActivColor('/booking',alert('Please Login or /Reagister'))}
+to={'/booking'} onClick={()=>ActivColor('/booking')}
  className={` ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>BOOKING
  </Link>
  </li>
