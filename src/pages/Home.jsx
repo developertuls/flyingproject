@@ -63,7 +63,7 @@ export const Home = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="relative min-h-screen bgg overflow-hidden"
+      className="relative min-h-screen bgg overflow-hidden "
       style={{
         backgroundImage:
           "url(https://images.unsplash.com/photo-1582360113507-e22478766daf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMxfHx8ZW58MHx8fHx8)",
@@ -78,7 +78,7 @@ export const Home = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-10 container mx-auto mt-[90px] px-4"
+        className="relative z-10  mx-auto mt-[90px] px-4 "
       >
         <h1 className="md-text-h1  text-center hidden md:block font-bold p-5 text-white text-5xl md:text-9xl md:mt-9 leading-tight">
           Travel <span className="text-[#EA2027]">the Sky</span>
@@ -87,11 +87,11 @@ export const Home = () => {
           Travel <span className="text-[#ED4C67]">the sky</span>!
         </h1>
 
-        <div className="mt-10   gap-6 items-center">
+        <div className="mt-10 border border-[red] md:w-full   ">
           {/* Slider */}
-          <div className="w-full md:h-[90vh] h-[50vh]  overflow-hidden relative">
+          <div className="w-full  md:h-[90vh] h-[50vh]  overflow-hidden relative">
             <div
-              className="relative flex transition-transform duration-700 ease-in-out h-full"
+              className=" relative flex transition-transform duration-700 ease-in-out h-full"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {slides.map((slide, index) => (
@@ -110,7 +110,7 @@ export const Home = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-white p-6 rounded shadow-lg">
+          <div className="  bg-white p-6 rounded shadow-lg">
             <h2 className="book text-center text-2xl md:text-3xl font-bold text-[#0c2461] mb-4">
               Book Your Flight
             </h2>
@@ -125,12 +125,12 @@ export const Home = () => {
                 <input
                   type="text"
                   placeholder="Flying From"
-                  className="w-full  border placeholder:pl-3 placeholder:text-xl border-gray-300 py-3 rounded"
+                  className="w-full  border focus:ring-1 focus:outline-none   placeholder:pl-3 placeholder:text-xl border-gray-300 py-3 rounded"
                 />
                 <input
                   type="text"
                   placeholder="Flying To"
-                  className="w-full border  placeholder:pl-3 placeholder:text-xl border-gray-300 py-3 rounded"
+                  className="w-full border focus:ring-1 focus:outline-none placeholder:pl-3 placeholder:text-xl border-gray-300 py-3 rounded"
                 />
 
                 <div className="relative">
@@ -141,7 +141,7 @@ export const Home = () => {
                   )}
                   <input
                     type="date"
-                    className={` w-full border border-gray-300 p-3 rounded bg-transparent ${focusedDeparture ? "text-black" : "text-transparent"}`}
+                    className={`focus:ring-1 focus:outline-none   w-full border border-gray-300 p-3 rounded bg-transparent ${focusedDeparture ? "text-black" : "text-transparent"}`}
                     onFocus={() => setFocusedDeparture(true)}
                     onBlur={(e) => {
                       if (!e.target.value) setFocusedDeparture(false);
@@ -157,7 +157,7 @@ export const Home = () => {
                   )}
                   <input
                     type="date"
-                    className={`  w-full border border-gray-300 p-3 rounded bg-transparent ${focusedReturn ? "text-black" : "text-transparent"}`}
+                    className={`focus:ring-1 focus:outline-none   w-full border border-gray-300 p-3 rounded bg-transparent ${focusedReturn ? "text-black" : "text-transparent"}`}
                     onFocus={() => setFocusedReturn(true)}
                     onBlur={(e) => {
                       if (!e.target.value) setFocusedReturn(false);
@@ -168,7 +168,7 @@ export const Home = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#307b82]  text-white py-4 text-xl rounded font-semibold"
+                className="transition-all duration-300 hover:w-[95%] block mx-auto bg-[#307b82] w-full hover:bg-[#31afba] text-white py-4 text-2xl rounded font-semibold"
               >
                 Search Flights
               </button>
