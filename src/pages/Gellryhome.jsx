@@ -4,28 +4,55 @@ import { FaHandshake } from "react-icons/fa";
 import { FcHome } from "react-icons/fc";
 import { SiHomeassistant } from "react-icons/si";
 import { motion } from "motion/react";
-
+import { IoMdSearch } from "react-icons/io";
 
 
 
 export const Gellryhome = () => {
   return (
-    <div className=" py-10 ">
-    <div className="flex flex-col md:flex-row container mx-auto px-4 gap-6">
+    
+    <div className=" py-10 border">
+<h1 className="md:text-5xl text-4xl px-4 font-bold text-center mb-9">Hotel booking for all <br /> <span className="text-[#EA2027]">countries</span></h1>
+ <div class="flex items-center justify-center w-[95%] rounded-lg mx-auto  py-3 bg-[#12CBC4]">
+  <div class="relative flex mx-auto justify-center text-2xl  items-center px-6 w-full max-w-md">
+    <input
+      type="text"
+      placeholder="Search... Your cuntry"
+      class="w-full md:w-[400%]  mx-auto border overflow-hidden border-gray-300 rounded-lg md:py-3 py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+   <IoMdSearch className="md:ml-[-60px] w-[5%] md:w-[40%]  ml-[-28px] text-2xl font-bold"/>
+
+  </div>
+</div>
+  
+   
+    <div className="flex mt-12 flex-col md:flex-row container mx-auto px-4 gap-6">
 
         {/* Left side */}
-        <div className="new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
-          backgroundImage:"url(https://plus.unsplash.com/premium_photo-1746387628298-af5695a3f935?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+        <div className="hover:scale-105 transition-all duration-150 new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
+          backgroundImage:"url(https://cdn.pixabay.com/photo/2019/08/19/13/58/bed-4416515_1280.jpg)"
         }}>
 
 
 
 
+
         </div>
+        {/* Left side */}
+        <motion.div
+        
+         className="hover:scale-105 transition-all duration-150 new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
+          backgroundImage:"url(https://cdn.pixabay.com/photo/2020/05/04/09/58/house-5128521_1280.jpg)"
+        }}>
+
+
+
+
+        </motion.div>
 
         {/* Right side */}
         <div className="w-full md:w-1/2 md:mt-[75px] p-4 ">
-          <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Bayshores Traditional</h1>
+          <h1 className="text-2xl font-bold mb-2 text-center md:text-left"> Family Hotel Design.</h1>
          
           <p className="text-sm  mb-4 md:text-left text-justify">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
@@ -33,8 +60,14 @@ export const Gellryhome = () => {
             corrupti culpa molestiae voluptas eius numquam at aut debitis
             consequuntur! Ab, consectetur repellat.
           </p>
-          <button className="transition-all duration-5.9   hover:px-7 hover:py-3  md:mx-0 mx-auto block bg-[#12CBC4] hover:bg-[#2d7a77] text-white px-6 py-2 rounded font-medium">
-            Yourdesite
+          <p className="text-sm  mb-4 md:text-left text-justify">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
+            vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
+            corrupti culpa molestiae voluptas eius numquam at aut debitis
+            consequuntur! Ab, consectetur repellat.
+          </p>
+          <button className="transition-all duration-150   hover:px-7 py-3  md:mx-0 mx-auto block bg-[#ED4C67] hover:bg-[#a71418] text-white px-12 text-2xl rounded font-medium">
+            Booking
           </button>
         </div>
 
@@ -42,12 +75,12 @@ export const Gellryhome = () => {
 
 
       </div>
-      <div className="md:mt-9 flex flex-col md:flex-row container mx-auto px-4 gap-6">
+      <div className="md:mt-9 border  flex flex-col md:flex-row container mx-auto px-4 gap-6">
         {/* Left side */}
-      <div className="w-full md:w-1/2 md:mt-[99px] p-4 ">
-          <h1 className="text-2xl font-bold mb-2 text-center md:text-left">Your home and the outside view are really impressive</h1>
+      <div className="">
+          <h1 className="text-2xl font-bold mb-9 text-center mt-[50px] md:text-left ">The single home design and the outside view are really impressive.</h1>
          
-          <p className="text-sm  mb-4 md:text-left text-justify">
+          <p className="text-sm  mb-4  text-justify">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             vitae dolorem quidem suscipit fugit, quibusdam ducimus nesciunt
             corrupti culpa molestiae voluptas eius numquam at aut debitis
@@ -55,23 +88,28 @@ export const Gellryhome = () => {
           </p>
           <Link>
           <button
-           className= "transition-all duration-5.9 md:mx-0 hover:px-7 hover:py-3 hover:bg-[#2d7a77] mx-auto block bg-[#12CBC4] font-medium text-white px-6 py-2 rounded">
-            Yourdesite
+           className= "transition-all duration-5.9 md:mx-0 hover:px-7 hover:py-3 hover:bg-[#b01419] mx-auto block bg-[#EA2027] text-2xl font-medium text-white px-12 py-3 rounded">
+            Booking
           </button>
           </Link>
         </div>
 
+      
+
         {/* Right side */}
         
-  <div className="new-2 w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
-    backgroundImage:"url(https://plus.unsplash.com/premium_photo-1686782502813-51579b55f6d8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+  <div className="hover:scale-105 transition-all duration-150 new-2 w-full  md:h-[400px] h-[300px]" style={{
+    backgroundImage:"url(https://media.istockphoto.com/id/1453121641/photo/modern-hotel-room-with-double-bed-night-tables-and-day-sofa-bed.jpg?s=612x612&w=0&k=20&c=1DgkQwVvd3XzGjCaZ3qzyLoinCSQtJoueQ5ODmzaw1w=)"
   }} >
         
-          {/* <img
-            src="images/carhom.jpg"
-            alt="gallery"
-            className="w-full h-auto object-cover"
-          /> */}
+       
+        </div>
+        
+  <div className="hover:scale-105 transition-all duration-150  new-2 w-full  md:h-[400px] h-[300px]" style={{
+    backgroundImage:"url(https://media.istockphoto.com/id/2220101153/photo/hotel-room.jpg?s=612x612&w=0&k=20&c=efduij5sBW3u3Fq0qP0HLwkBGbENZAlO3-uZwYo8ZKI=)"
+  }} >
+        
+       
         </div>
        
 
@@ -83,7 +121,7 @@ export const Gellryhome = () => {
 
 {/* flexdiv */}
 
-<div className=" py-8 mt-[80px]  ">
+{/* <div className=" py-8 mt-[80px]  ">
 
   <h1 className="text-2xl md:text-4xl font-bold text-center "><span>Empowering</span> You through <br />Real Estste <span className="text-[#209c7d]">Solutions.</span> </h1>
   
@@ -91,8 +129,7 @@ export const Gellryhome = () => {
   
   <div className="transition-all duration-4.5 p-8 mt-4 md:mt-7 mx-auto container  grid md:grid-cols-3 justify-center items-center md:gap-x-4 gap-y-5">
 
-    
-   {/* flexBox-1 */} 
+
   <div className="w-[400px]   p-9 shadow-md ">
    <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
    <FcHome className="text-[#6D214F]"/>
@@ -112,7 +149,6 @@ export const Gellryhome = () => {
 
 
 
-  {/* flexBox-2 */} 
   <motion.div
    initial={{ opacity: 0, y: -100 }}
    whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +169,6 @@ export const Gellryhome = () => {
 
 
 
-  {/* flexBox-3 */} 
   <div className="transition-all duration-4.5   w-[400px]  text-left p-9 shadow-md">
    <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
    <SiHomeassistant className="text-[#6d6a6a]"/>
@@ -153,19 +188,8 @@ export const Gellryhome = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 </div>
-</div>
+</div> */}
 
     </div>
   );

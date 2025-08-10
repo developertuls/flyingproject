@@ -58,7 +58,7 @@ export const Topolidy = () => {
                 <img
                   src={item.img}
                   alt="destination"
-                  className="w-full h-[200px] object-cover rounded cursor-pointer"
+                  className="hover:scale-105 duration-150 w-full h-[200px] object-cover rounded cursor-pointer"
                 />
             
               <span className="block mt-4 text-sm text-gray-700">

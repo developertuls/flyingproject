@@ -99,11 +99,11 @@ viewport={{ once: true }}
 </div>
 
     <motion.ul
-     className=' text-text md:text-2xl hidden md:flex gap-x-4 md:gap-x-6'>
+     className='  md:text-xl hidden md:flex gap-x-4 md:gap-x-6'>
 <li>
   <Link 
 to={'/home'} onClick={()=>ActivColor('/home')}
- className={`text-[#006266] font-semibold ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>HOME
+ className={`text-[#ED4C67] font-semibold ${Activ === '/booking'? 'font-bold ':'hover:font-bold'}`}>HOME
  </Link>
  </li >
 
@@ -116,7 +116,7 @@ onClick={gotologin}
 >
   <Link 
 to={'/booking'} onClick={()=>ActivColor('/booking')}
- className={` ${Activ === '/booking'? 'font-bold':'hover:font-bold'}`}>BOOKING
+ className={` ${Activ === '/booking'? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>BOOKING
  </Link>
  </li>
 
@@ -127,7 +127,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     transition={{ duration: 0.6 }}
      >
       <Link to={'/contact'} onClick={()=>ActivColor('/contact')}
-       className={` ${Activ==='/contact' ? 'font-bold':'hover:font-bold'}`}>CONTACT
+       className={` ${Activ==='/contact' ? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>CONTACT
        </Link>
        </li>
      <li
@@ -138,13 +138,13 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
      > 
       <Link to={'/blogs'}
       onClick={()=>ActivColor('/blogs')}
-        className={`${Activ==='/blogs'? 'font-bold':'hover:font-bold'}`}>BLOGS
+        className={`${Activ==='/blogs'? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>BLOGS
         </Link>
         </li>
       <li>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
-         className={`${Activ=== '/like' ?'hover:font-bold':'hover:font-bold'}`} >
+         className={`${Activ=== '/like' ?'hover:font-bold text-[#0440b1]':'hover:font-bold'}`} >
         
           LIKE HOME
           </Link></li>
@@ -153,7 +153,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     <Link to={'/login'}>
     <button
     onClick={()=>ActivColor('/login')}
-     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#197b78] text-white bg-[#166663] px-6 py-2 md:text-2xl hidden md:block'}`}>
+     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#197b78] rounded-lg text-white bg-[#166663] px-6 py-2 md:text-2xl hidden md:block'}`}>
       Login
       </button>
       </Link>
