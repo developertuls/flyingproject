@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import { Link, useParams } from "react-router-dom"; 
 import { HoverZoom } from "../comonents/HoverZoom";
-export const HolidayDetails = () => {
+export const HotelBooking = () => {
   const { id } = useParams();
   const holidayData = [
 
@@ -53,7 +53,7 @@ export const HolidayDetails = () => {
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.9, ease: "easeOut" }}
     viewport={{ once: true }}
-    className="overflow-hidden md:flex justify-center items-center  max-h-3xl mx-auto mt-20 bg-white shadow-lg rounded p-6 text-center">
+    className="  overflow-hidden md:flex justify-center items-center  max-h-3xl mx-auto mt-20 bg-white shadow-lg rounded p-6 text-center">
        
 
         {/* ✅ HoverZoom component */}

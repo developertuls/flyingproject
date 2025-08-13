@@ -162,7 +162,7 @@ navigaet('/login')
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-       className="bgg relative  md:w-[36%] p-5  bg-[#0e0a32]/70 ">
+       className="bgg relative  md:w-[36%] p-5  bg-[#6F1E51]/80 ">
          {/* <div className=" bg-black bg-opacity-60 "></div> */}
         <h2 className="text-white font-bold text-center md:text-3xl mb-6 text-3xl">Reagister</h2>
         <form onSubmit={hendelsubmit} className="space-y-4 bg-[#1B1464]/20">

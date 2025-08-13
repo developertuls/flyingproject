@@ -1,30 +1,104 @@
 
-import { Link } from "react-router-dom";
-import { FaHandshake } from "react-icons/fa";
-import { FcHome } from "react-icons/fc";
-import { SiHomeassistant } from "react-icons/si";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { IoMdSearch } from "react-icons/io";
+import { useState } from "react";
+
+
+const countries = [
+  { id: 1, name: "Bangladesh", 
+  Images:[
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgaW4BkIM5Gtg5HjZP2U9zrfnh2g1EBkc5rQ&s" ,
+    ],
+    flag: "https://flagcdn.com/w320/bd.png"},
+  { id: 2, name: "India", flag: "https://flagcdn.com/w320/in.png" },
+  { id: 3, name: "Pakistan", flag: "https://flagcdn.com/w320/pk.png" },
+  { id: 4, name: "Nepal", flag: "https://flagcdn.com/w320/np.png" },
+  { id: 5, name: "Japan", flag: "https://flagcdn.com/w320/jp.png" },
+];
 
 
 
 export const Gellryhome = () => {
+const [search, setSearch] = useState("");
+const shownave = useNavigate();
+
+
+
+// search Allcuntris
+
+ const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+
+
+  // show List hidden
+  const displayCountries = search
+    ? filteredCountries
+    : countries.filter((c) => !c.hidden); 
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     
     <div className=" py-10 border">
 <h1 className="md:text-5xl text-4xl px-4 font-bold text-center mb-9">Hotel booking for all <br /> <span className="text-[#EA2027]">countries</span></h1>
- <div class="flex items-center justify-center w-[95%] rounded-lg mx-auto  py-3 bg-[#12CBC4]">
+ <div class="overflow-hidden flex items-center justify-center w-[95%] rounded-lg mx-auto  py-6 bg-[#12CBC4]">
+   <div className="overflow-hidden" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+       {search && filteredCountries.length > 0 ? (
+          filteredCountries.map((country) => (
+            <Link
+           
+              key={country.id}
+             to={`/country/${country.id}`} className="bg-[#fff] p-5 ml-5"
+               style={{ textDecoration: "none", color: "inherit"
+
+
+                
+                }}
+            >
+
+
+              
+              <img   className="cursor-pointer"  src={country.flag} alt={country.name} width="100"  />
+              <h4 className="animate-bounce mt-2">{country.name}</h4>
+      
+            </Link>
+          ))
+        ) : (
+          <p className="ml-4 font-semibold text-[#121273]">No country found</p>
+        )}
+      </div> 
+  
+  
   <div class="relative flex mx-auto justify-center text-2xl  items-center px-6 w-full max-w-md">
     <input
       type="text"
-      placeholder="Search... Your cuntry"
+      value={search}
+       onChange={(e) => setSearch(e.target.value)}
+      placeholder="Search for a country..."
       class="w-full md:w-[400%]  mx-auto border overflow-hidden border-gray-300 rounded-lg md:py-3 py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
+
+
+
+
    <IoMdSearch className="md:ml-[-60px] w-[5%] md:w-[40%]  ml-[-28px] text-2xl font-bold"/>
 
   </div>
 </div>
-  
+
    
     <div className="flex mt-12 flex-col md:flex-row container mx-auto px-4 gap-6">
 
@@ -119,77 +193,6 @@ export const Gellryhome = () => {
 </div>
 
 
-{/* flexdiv */}
-
-{/* <div className=" py-8 mt-[80px]  ">
-
-  <h1 className="text-2xl md:text-4xl font-bold text-center "><span>Empowering</span> You through <br />Real Estste <span className="text-[#209c7d]">Solutions.</span> </h1>
-  
-  
-  
-  <div className="transition-all duration-4.5 p-8 mt-4 md:mt-7 mx-auto container  grid md:grid-cols-3 justify-center items-center md:gap-x-4 gap-y-5">
-
-
-  <div className="w-[400px]   p-9 shadow-md ">
-   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
-   <FcHome className="text-[#6D214F]"/>
-   <span className="text-gray-400">o1</span>
-   </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Find Your Dream Home</h2>
-   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est </p>
-  <button 
-  className="transition-all duration-4.5   hover:bg-[#362ab9] w-full text-xl text-white font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
-    Find Home
-    </button>
-
- </div>
-
-
-
-
-
-
-  <motion.div
-   initial={{ opacity: 0, y: -100 }}
-   whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7, ease: "easeOut" }}
-    viewport={{ once: true }}
-   className=" transition-all duration-4.5 w-[400px]   text-left p-9 shadow-md">
-   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
-   <FaHandshake className="text-[#878383]"/>
-   <span className="text-gray-400">o2</span>
-   </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Builld Weaith with Ease.</h2>
-   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
-  <button className="hover:bg-[#166663] hover:text-white w-full text-xl font-semibold block bg-[#12CBC4] mx-auto mt-9 px-7 py-2 rounded-full">Find Home</button>
-
- </motion.div>
-
-
-
-
-
-  <div className="transition-all duration-4.5   w-[400px]  text-left p-9 shadow-md">
-   <p className="flex justify-between items-center text-xl md:text-3xl font-bold">
-   <SiHomeassistant className="text-[#6d6a6a]"/>
-   <span className="text-gray-400">o3</span>
-   </p> 
-   <h2 className="text-xl md:text-2xl font-semibold p-4 text-center">Love Home style</h2>
-   <p className="md:text-left text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repudiandae tenetur totam sapiente officiis est</p>
-  <button
-   className="hover:bg-[#2d239d] text-white w-full text-xl font-semibold block bg-[#1B1464] mx-auto mt-9 px-7 py-2 rounded-full">
-    Find Home
-    </button>
-
- </div>
-
-
-
-
-
-
-</div>
-</div> */}
 
     </div>
   );

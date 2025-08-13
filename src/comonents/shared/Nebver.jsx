@@ -56,12 +56,13 @@ naviget("/login")
 
   return (
 <motion.nav
+  // variants={sectionVariant} 
 initial={{ opacity: 0, y: 100 ,scaleX:0}}
 whileInView={{ opacity: 1, y: 0 ,scaleX:1}}
 transition={{ duration: 0.5, ease: "easeOut" }}
 viewport={{ once: true }}
 
-  className='bg-white py-4 md:py-6 fixed top-0 w-full z-40 shadow-md transition-transform duration-500 ease-in-out
+  className='bg-[#fff] py-4 md:py-5 fixed top-0 w-full z-40 shadow-md transition-transform duration-500 ease-in-out
  '  
   
         
@@ -103,7 +104,7 @@ viewport={{ once: true }}
 <li>
   <Link 
 to={'/home'} onClick={()=>ActivColor('/home')}
- className={`text-[#ED4C67] font-semibold ${Activ === '/booking'? 'font-bold ':'hover:font-bold'}`}>HOME
+ className={`text-[#ED4C67] font-semibold ${Activ === '/booking'? 'font-bold ':'hover:font-bold'}`}>Home
  </Link>
  </li >
 
@@ -116,7 +117,7 @@ onClick={gotologin}
 >
   <Link 
 to={'/booking'} onClick={()=>ActivColor('/booking')}
- className={` ${Activ === '/booking'? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>BOOKING
+ className={` ${Activ === '/booking'? 'font-bold text-[#0440b1]':'hover:text-[#0440b1]'}`}>Booking Flight
  </Link>
  </li>
 
@@ -127,7 +128,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     transition={{ duration: 0.6 }}
      >
       <Link to={'/contact'} onClick={()=>ActivColor('/contact')}
-       className={` ${Activ==='/contact' ? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>CONTACT
+       className={` ${Activ==='/contact' ? 'font-bold text-[#0440b1]':'hover:text-[#0440b1]'}`}>Contact
        </Link>
        </li>
      <li
@@ -138,15 +139,15 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
      > 
       <Link to={'/blogs'}
       onClick={()=>ActivColor('/blogs')}
-        className={`${Activ==='/blogs'? 'font-bold text-[#0440b1]':'hover:font-bold'}`}>BLOGS
+        className={`${Activ==='/blogs'? 'font-bold text-[#0440b1]':'hover:text-[#0440b1]  transition-all duration-150' }`}>BLOGS
         </Link>
         </li>
       <li>
         <Link to={'/like'}
         onClick={()=>ActivColor('/like')}
-         className={`${Activ=== '/like' ?'hover:font-bold text-[#0440b1]':'hover:font-bold'}`} >
+         className={`${Activ=== '/like' ?'hover:font-bold text-[#0440b1]':'hover:text-[#0440b1]'}`} >
         
-          LIKE HOME
+          Hotel Booking
           </Link></li>
      
     </motion.ul>

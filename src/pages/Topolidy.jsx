@@ -37,9 +37,9 @@ export const Topolidy = () => {
   ];
 
   return (
-    <div className="py-10 mt-9 md:mt-[80px] bg-white">
+    <div className="py-10 mt-9 md:mt-[80px] bg-[#1B1464]">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-10 text-[#333]">
+        <h1 className="text-3xl font-bold text-center mb-10 text-[#fff]">
           TOP HOLIDAY DESTINATIONS
         </h1>
 

@@ -3,21 +3,21 @@
 import { Home } from './Home'
 import { Login } from './Login'
 import { Gellryhome } from './Gellryhome'
-import { Topolidy } from './Topolidy'
-import { Bookingthe } from './Bookingthe'
 import FlightSearchForm from './FlightSearchForm'
 import FlightDetails from './FlightDetails'
+// import CountrySearch from '../comonents/CountrySearch'
 
 
 
 export const Homepeags = () => {
   return (
     <div>
-<Home/>
+<Home />
 
 <FlightSearchForm/>
 <FlightDetails/>
 <Login/>
+{/* <CountrySearch/> */}
 <Gellryhome/>
 {/* <Topolidy/> */}
 {/* <Bookingthe/> */}
