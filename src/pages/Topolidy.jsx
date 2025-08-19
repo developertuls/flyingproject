@@ -9,25 +9,25 @@ export const Topolidy = () => {
 
   const holidayData = [
     {
-      img: "https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg",
+      img: "https://images.unsplash.com/photo-1584798448292-5e7ba13a0826?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIyfHx8ZW58MHx8fHx8",
      
       desc: "Enjoy sunny days on the beautiful beaches of Bali.",
      
     },
     {
-      img: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      img: "https://images.unsplash.com/photo-1721396109114-4ca15f095d6d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8",
       desc: "Breathtaking views from the Himalayan mountains."
     },
     {
-      img: "https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg",
+      img: "https://images.unsplash.com/photo-1699036024578-956f94df95f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMxfHx8ZW58MHx8fHx8",
       desc: "Explore the culture and nightlife of Tokyo city."
     },
     {
-      img: "https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg",
+      img: "https://images.unsplash.com/photo-1702103208265-e07e851acad3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM4fHx8ZW58MHx8fHx8",
       desc: "Adventure through the golden sands of Dubai."
     },
     {
-      img: "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg",
+      img: "https://images.unsplash.com/photo-1658704277613-1b6a920ddf9e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM5fHx8ZW58MHx8fHx8",
       desc: "Relax in the calm and green Amazon forest."
     },
     {
@@ -65,7 +65,7 @@ export const Topolidy = () => {
                 {item.desc}
                 
               </span>
-              <button className="block mx-auto md:mx-0 mt-3 hover:bg-[#144036] font-bold bg-[#218c74] text-white px-5 py-2 rounded">
+              <button className="block mx-auto md:mx-0 mt-3 hover:bg-[#144036] font-bold bg-[#B53471] text-white px-5 py-2 rounded">
                 New Booking
               </button>
             </div>

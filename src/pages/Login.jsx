@@ -29,7 +29,7 @@ export const Login = () => {
 
 
 
-      <div className="p-9 container mx-auto flex flex-col md:flex-row md:gap-x-5  justify-center items-stretch px-4 overflow-hidden ">
+      <div className="p-9 mx-auto flex flex-col md:flex-row md:gap-x-5  justify-center items-stretch px-4 overflow-hidden ">
         {/* Left side */}
         <div className=" text-div relative w-full  h-[500px] md:h-[500px] overflow-hidden mb-5 md:mb-0"
     style={{
@@ -46,7 +46,7 @@ export const Login = () => {
              className="mt-[40px] text-lg font-medium md:text-lef text-justify">
 
  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rerum, optio placeat officia porro at libero iste quod vel dolor fuga accusamus? Quidem ratione error, illo doloribus minima impedit quaerat amet ipsa possimus hic nemo perspiciatis explicabo deleniti similique placeat,
-<span className="hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rerum, optio placeat officia porro at libero iste quod vel dolor fuga accusamus? Quidem ratione error, illo doloribus minima impedit quaerat amet ipsa possimus hic nemo perspiciatis explicabo deleniti similique placeat, minus optio veniam consectetur reiciendis!
+<span className="hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rerum, optio placeat officia porro at libero iste quod vel dolor fuga accusamus? Quidem ratione error, illo doloribus minima impedit quaerat amet ipsa possimus hic nemo perspiciatis explicabo deleniti similique placeat, minus optio veniam consectetur reiciendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, rerum, optio placeat officia porro at libero iste quod vel dolor fuga accusamus? Quidem ratione error, illo doloribus minima impedit quaerat amet ipsa possimus hic nemo perspiciatis explicabo deleniti similique placeat, minus optio veniam consectetur reiciendis!
 </span>
     
             </p>

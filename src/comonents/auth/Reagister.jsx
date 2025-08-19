@@ -154,9 +154,13 @@ navigaet('/login')
   return (
 <div className=" relative  flex justify-center items-center bg-[green] mt-[66px]  md:mt-[99px]"
     style={{
-      backgroundImage:"url(https://plus.unsplash.com/premium_photo-1661963505505-f992fa0a8630?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+      backgroundImage:"url(https://media.istockphoto.com/id/905229102/photo/airplane-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qvVATD_yyZPr8eSz404dPjZ5s-HFqHO7CzdVjub4iZ0=)",
+    backgroundSize: "cover",
+   backgroundPosition: "center",
     }}
 >
+
+  <div className="absolute inset-0 bg-[#12CBC4]/60 gb"></div> 
       <motion.div
        initial={{ opacity: 0, y: 100 }} // 
         whileInView={{ opacity: 1, y: 0 }}

@@ -52,7 +52,7 @@ const shownave = useNavigate();
 
   return (
     
-    <div className=" py-10 border">
+    <div className=" py-10 ">
 <h1 className="md:text-5xl text-4xl px-4 font-bold text-center mb-9">Hotel booking for all <br /> <span className="text-[#EA2027]">countries</span></h1>
  <div class="overflow-hidden flex items-center justify-center w-[95%] rounded-lg mx-auto  py-6 bg-[#12CBC4]">
    <div className="overflow-hidden" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
@@ -88,7 +88,7 @@ const shownave = useNavigate();
       value={search}
        onChange={(e) => setSearch(e.target.value)}
       placeholder="Search for a country..."
-      class="w-full md:w-[400%]  mx-auto border overflow-hidden border-gray-300 rounded-lg md:py-3 py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="w-full md:w-[400%]  mx-auto  overflow-hidden border-gray-300 rounded-lg md:py-3 py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
 
 
@@ -104,7 +104,7 @@ const shownave = useNavigate();
 
         {/* Left side */}
         <div className="hover:scale-105 transition-all duration-150 new w-full md:w-1/2 md:h-[400px] h-[300px]" style={{
-          backgroundImage:"url(https://cdn.pixabay.com/photo/2019/08/19/13/58/bed-4416515_1280.jpg)"
+          backgroundImage:"url(https://images.unsplash.com/photo-1721396109114-4ca15f095d6d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8)"
         }}>
 
 
@@ -149,7 +149,7 @@ const shownave = useNavigate();
 
 
       </div>
-      <div className="md:mt-9 border  flex flex-col md:flex-row container mx-auto px-4 gap-6">
+      <div className="md:mt-9  flex flex-col md:flex-row container mx-auto px-4 gap-6">
         {/* Left side */}
       <div className="">
           <h1 className="text-2xl font-bold mb-9 text-center mt-[50px] md:text-left ">The single home design and the outside view are really impressive.</h1>

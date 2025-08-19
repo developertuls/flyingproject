@@ -11,9 +11,9 @@ export default function CountryDetail({ countries }) {
   }
 
   return (
-    <div className="mt-[90px] h-[70vh] bg-[red]" style={{ textAlign: "center", marginTop: "20px" }}>
+    <div className=" h-[70vh] bg-[#fff]" style={{ textAlign: "center", marginTop: "20px" }}>
       <h2>{country.name}</h2>
-      <img className="ml-8  mt-9 " src={country.flag} alt={country.name} width="200" />
+      <img className="animate-bounce ml-8  mt-[90px] " src={country.flag} alt={country.name} width="200" />
       <p>More information about {country.name}...</p>
     </div>
   );

@@ -57,9 +57,9 @@ naviget("/login")
   return (
 <motion.nav
   // variants={sectionVariant} 
-initial={{ opacity: 0, y: 100 ,scaleX:0}}
-whileInView={{ opacity: 1, y: 0 ,scaleX:1}}
-transition={{ duration: 0.5, ease: "easeOut" }}
+initial={{ opacity: 0, x: 100}}
+whileInView={{ opacity: 1, x: 0}}
+transition={{ duration: 0.1, ease: "easeOut" }}
 viewport={{ once: true }}
 
   className='bg-[#fff] py-4 md:py-5 fixed top-0 w-full z-40 shadow-md transition-transform duration-500 ease-in-out

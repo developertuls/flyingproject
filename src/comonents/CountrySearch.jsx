@@ -12,12 +12,11 @@ const countries = [
 export default function CountrySearch() {
   const [search, setSearch] = useState("");
 
-  // সার্চ হলে সব দেশের উপর সার্চ হবে
+
   const filteredCountries = countries.filter((country) =>
     country.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // শো করার লিস্ট (সার্চ ফাঁকা হলে শুধু hidden:false)
   const displayCountries = search
     ? filteredCountries
     : countries.filter((c) => !c.hidden);
