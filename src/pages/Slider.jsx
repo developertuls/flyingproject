@@ -6,7 +6,7 @@ function Slider() {
   const slides = [
     {
       image:
-        "https://images.unsplash.com/photo-1543773819-62742579ede6?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1677644293715-c013fa300360?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHViYWljb3VudHJpfGVufDB8fDB8fHww",
       text: "Dubai",
     },
     {
@@ -14,12 +14,52 @@ function Slider() {
         "https://plus.unsplash.com/premium_photo-1697730269884-629ccf615721?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       text: "Saudi Arabia",
     },
+
     {
       image:
         "https://media.istockphoto.com/id/185107025/photo/airplane-in-the-sky.jpg?s=612x612&w=0&k=20&c=rbSuRHJq1LWskEZY-txNs3ZzjMpejO6Uews0PErBflI=",
       text: "Explore the World with Comfort",
     },
-    // বাকিগুলো...
+    
+
+
+  {
+      image:
+        "https://plus.unsplash.com/premium_photo-1697729890503-bcb24e606a2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHx8",
+      text: "JAPAN",
+    },
+
+ {
+      image:
+        "https://images.unsplash.com/photo-1592050103688-a6053fc0e386?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI1fHx8ZW58MHx8fHx8",
+      text: "Malaysia",
+    },
+
+
+{
+      image:
+        "https://media.istockphoto.com/id/2222229208/photo/aerial-view-of-the-muttrah-corniche-muscat.jpg?s=612x612&w=0&k=20&c=xJIRUQcuYYdGt0FtoYHiB9FTgcruAMY95qnBuw4Vtm0=",
+      text: "OMAN",
+    },
+
+
+{
+      image:
+        "https://images.unsplash.com/photo-1724398931538-b0789954da7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8",
+      text: "France",
+    },
+{
+      image:
+        "https://images.unsplash.com/photo-1697107744360-0718b525119d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhYmFub24lMjBjb3VudHJpfGVufDB8fDB8fHww",
+      text: "Labanon",
+    },
+    
+{
+      image:
+        "https://media.istockphoto.com/id/1009451704/photo/rondon%C3%B3polis.jpg?s=612x612&w=0&k=20&c=VEEfG7Uc2ijnDWFsByejuXGZQmr-uozsYxVhvME7w5E=",
+      text: "zimbawe",
+    },
+
   ];
 
   const [current, setCurrent] = useState(0);

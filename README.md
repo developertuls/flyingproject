@@ -1,17 +1,17 @@
 
- My Mini home project
+ My Mini Flight project
  A modern homeproject web application built with React, Vite, and Tailwind CSS.
 
  🔗 Live Demo
  Check the main live website here:
- 👉 https://profound-mermaid-ea927c.netlify.app
+ 👉 https://grand-youtiao-c0c26c.netlify.app/
 
 
 
 
 📁 Repository
 GitHub source code:
-👉 https://github.com/developertuls/my-ecomerce.git
+👉 https://github.com/developertuls/flight.git
 
 ✨ Features
 ⚡ Fast development with React + Vite

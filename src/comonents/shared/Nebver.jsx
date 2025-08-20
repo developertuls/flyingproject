@@ -75,13 +75,14 @@ viewport={{ once: true }}
  
    className='w-full md:w-[95%] mx-auto'>
   <div className='container mx-auto flex justify-between items-center'>
+   <Link to={"/"}>
    <div className="  text-2xl flex justify-center items-center">
    <GiAirplaneDeparture className=" font-bold  text-3xl text-[#B33771] " />
 <h3 className="text-[#4834d4] font-bold"> <span className="font-bold">T</span>ravels</h3>
      
       
    </div>
-
+</Link>
 
 
 
@@ -142,21 +143,25 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
         className={`${Activ==='/blogs'? 'font-bold text-[#0440b1]':'hover:text-[#0440b1]  transition-all duration-150' }`}>BLOGS
         </Link>
         </li>
-      <li>
-        <Link to={'/like'}
+      <li onClick={gotologin}>
+        <Link to={'/booking'}
         onClick={()=>ActivColor('/like')}
          className={`${Activ=== '/like' ?'hover:font-bold text-[#0440b1]':'hover:text-[#0440b1]'}`} >
         
-          Hotel Booking
+         Booking Flight
           </Link></li>
      
     </motion.ul>
     <Link to={'/login'}>
-    <button
+    <motion.button
+    // initial={{ opacity: 0, y: 100}}
+    // whileInView={{ opacity: 1, y: 0}}
+    // transition={{ duration: 0.9, ease: "easeOut" }}
+    // viewport={{ once: true }}
     onClick={()=>ActivColor('/login')}
      className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2 md:text-2xl hidden md:block':'hover:bg-[#197b78] rounded-lg text-white bg-[#166663] px-6 py-2 md:text-2xl hidden md:block'}`}>
       Login
-      </button>
+      </motion.button>
       </Link>
 
 
@@ -169,7 +174,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.7, ease: "easeOut" }}
 viewport={{ once: true }}
-   className='py-6 flex flex-col items-center bg-[#130f40]/90 text-white font-bold'>
+   className='py-6 flex flex-col items-center bg-[#00b894]/90 text-white font-bold'>
 
 
 
@@ -188,7 +193,7 @@ to={'/home'} onClick={()=>ActivColor('/home')}
   <li>
   <Link 
 to={'/booking'} onClick={()=>ActivColor('/booking')}
- className={` ${Activ === '/booking'? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>BOOKING
+ className={` ${Activ === '/booking'? 'text-[#3c40c6]  font-bold':'hover:font-bold'}`}>Booking Flight
  </Link>
  </li>
 
@@ -220,10 +225,10 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
 
       <li>
         <Link to={'/like'}
-        onClick={()=>ActivColor('/like')}
+        onClick={()=>ActivColor('/login')}
          className={`${Activ=== '/like' ?'text-[#3c40c6] font-bold':'hover:font-bold'}`} >
         
-          LIKE HOME
+          Hotel Booking
           </Link></li>
      
   
@@ -231,7 +236,7 @@ to={'/booking'} onClick={()=>ActivColor('/booking')}
     <button
     
     onClick={()=>ActivColor('/login')}
-     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2  ':'hover:bg-[#2efff8]  bg-[#2bcbba] px-6 py-2 md:text-2xl mt-5'}`}>
+     className={`${Activ==='/login'?'hover:bg-[#382bc5]  bg-[#1B1464] text-[#fff] px-6 py-2  ':'hover:bg-[#2efff8]  bg-[#833471] px-6 py-2 md:text-2xl mt-5'}`}>
     Login
 
       </button>

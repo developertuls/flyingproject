@@ -152,7 +152,7 @@ navigaet('/login')
 
 
   return (
-<div className=" relative  flex justify-center items-center bg-[green] mt-[66px]  md:mt-[99px]"
+<div className=" relative md:h-[150vh] md:p-9 flex justify-center items-center  mt-[66px]  md:mt-[79px]"
     style={{
       backgroundImage:"url(https://media.istockphoto.com/id/905229102/photo/airplane-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qvVATD_yyZPr8eSz404dPjZ5s-HFqHO7CzdVjub4iZ0=)",
     backgroundSize: "cover",
@@ -169,7 +169,7 @@ navigaet('/login')
        className="bgg relative  md:w-[36%] p-5  bg-[#6F1E51]/80 ">
          {/* <div className=" bg-black bg-opacity-60 "></div> */}
         <h2 className="text-white font-bold text-center md:text-3xl mb-6 text-3xl">Reagister</h2>
-        <form onSubmit={hendelsubmit} className="space-y-4 bg-[#1B1464]/20">
+        <form onSubmit={hendelsubmit} className="space-y-4 ">
           <input
            type="text"
            className="w-full border outline-none px-4 py-3 placeholder:text-2xl rounded focus:ring-2 focus:ring-[#e67e22]"

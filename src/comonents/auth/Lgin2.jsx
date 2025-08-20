@@ -151,7 +151,7 @@ navigaet('/booking')
 
 
   return (
-    <div className=" relative  overflow-hidden flex justify-center items-center  md:mt-[99px] md:h-[100vh] mt-[66px]"
+    <div className=" relative  overflow-hidden flex justify-center items-center  md:mt-[79px] md:h-[120vh] mt-[66px]"
     style={{
       backgroundImage:"url(https://media.istockphoto.com/id/905229102/photo/airplane-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qvVATD_yyZPr8eSz404dPjZ5s-HFqHO7CzdVjub4iZ0=)",
     backgroundSize: "cover",

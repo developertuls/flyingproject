@@ -26,8 +26,9 @@ export const Home = (  ) => {
       style={{
         backgroundImage:
           "url(https://images.unsplash.com/photo-1582360113507-e22478766daf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMxfHx8ZW58MHx8fHx8)",
-        backgroundSize: "cover",
+        backgroundSize: "cover ",
         backgroundPosition: "center",
+        backgroundRepeat:"no-repeat",
       }}
     >
       <div className="absolute inset-0 bg-[#130f40]/50"></div>
@@ -37,7 +38,7 @@ export const Home = (  ) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-10   mt-[70px] md:mt-[50px] px-4 "
+        className="relative z-10   mt-[50px] md:mt-[50px] px-4 "
       >
 
 
